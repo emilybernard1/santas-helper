@@ -71,26 +71,22 @@ As a user I want the ability to...
 | PUT        | /santasSecrets/edit/:id| Update (edit)     | Update  |
 
 
-
 ## Schedule
-
 - Friday 11/18: Project Planning, finish Readme, including wireframes and ERDs
 - Monday 11/21: Pitch idea, Seed db, Get the back end going
 - Tuesday 11/22: Testing with postman and make sure Back End is nearly good to go.
 - Saturday 11/26: Finish up Back End and start on Front End React
-- Sunday 10/31: Front End
-- Monday 11/1: Front End React, should be near MVP
-- Tuesday 11/2: Goal: MVP status, Work on Front End Styling, Deployment Party
-- Wednesday 11/3: Polish all details
-- Thursday 11/4: Polish all details
+- Sunday 11/27: Front End
+- Monday 11/28: Front End React, should be near MVP
+- Tuesday 11/29: Goal: MVP status, Work on Front End Styling, Deployment Party
+- Wednesday 11/30: Polish all details
+- Thursday 12/1: Polish all details
 - Friday 12/2: Presentation Day
 
 ## MVP
-
 - An app that looks and functions at least as well as the Pet App we did in class, with a navigation bar, and div boxes that display the users resources and allows the user to edit and delete them as well as make updates to them and make secret lists for stocking stuffers.
 
 ## Example Seed Data 
-
 ```
 const startGifts = [
     { name: "James", gift: "Schitt's Creek Game", type: "board game", bought: true, wrapped: true },
@@ -101,8 +97,8 @@ const startGifts = [
 ]
 ```
 
-# Getting Started with Create React App
 
+# Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
