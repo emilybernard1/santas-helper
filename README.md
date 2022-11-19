@@ -38,7 +38,7 @@ As a user I want the ability to...
   
   
 ## Application Wire Frames
-
+![wireframe1](/images/WF1-SantasHelper.png "WireFrame1")
 
 
 ## Entity Relationship Diagrams
