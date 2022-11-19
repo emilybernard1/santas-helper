@@ -46,7 +46,7 @@ As a user I want the ability to...
 
 ## Route Table
 | HTTP Method| URL Path | Action | CRUD |
-_________________________________________
+------------------------------------------
 | GET | /santasHelper | Index or list | Read |
 ______________________________________________
 | GET | /santasHelper/:id | Show or Retrieve | Read |
