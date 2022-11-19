@@ -48,19 +48,18 @@ As a user I want the ability to...
 | HTTP Method| URL Path | Action | CRUD |
 ------------------------------------------
 | GET | /santasHelper | Index or list | Read |
-______________________________________________
+------------------------------------------
 | GET | /santasHelper/:id | Show or Retrieve | Read |
 |     | /santasSecrets/:id |                 |      |
-_____________________________________________________
+------------------------------------------
 | POST | /santasHelper | Create | Create |
 |      | /santasSecrets/|       |        |
-_____________________________________________________
+------------------------------------------
 | PUT | /santasHelper/edit/:id | Update (edit) | Update |
 |     | /santasSecrets/edit/:id|               |        |
-_________________________________________________________
-| DELETE | /santasHelper/:id | Destroy | Delete |
+------------------------------------------
 |        | /santasSecrets/edit/:id|    |        |
-_________________________________________________
+------------------------------------------
 
 
 ## Schedule
