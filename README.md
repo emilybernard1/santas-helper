@@ -39,9 +39,16 @@ As a user I want the ability to...
   
 ## Application Wire Frames
 ![wireframe1](/images/WF1-SantasHelper.png "WireFrame1")
+![wireframe2](/images/WF2-SantasHelper.png "WireFrame2")
+![wireframe3](/images/WF3-SantasHelper.png "WireFrame3")
+![wireframe4](/images/WF4-SantasHelper.png "WireFrame4")
+![wireframe5](/images/WF5-SantasHelper.png "WireFrame5")
+![wireframe6](/images/WF6-SantasHelper.png "WireFrame6")
+![wireframe7](/images/WF7-SantasHelper.png "WireFrame7")
 
 
 ## Entity Relationship Diagrams
+![erd](/images/ERD-SantasHelper.png "ERD")
 
 
 ## Route Table
