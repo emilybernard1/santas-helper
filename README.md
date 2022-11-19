@@ -1,3 +1,97 @@
+# Santa's Helper
+## Overview
+This application is a full stack application where users can create wish lists of Christmas gifts and denote whether each item has been bought and wrapped. Users will also be able to keep a "wishlist for Santa" called Santa's Secrets.
+
+## Deployed Link
+TBD
+
+
+## User Stories
+As a user I want the ability to...
+  - sign in  or register
+  - make a wishlist for each your loved ones
+  - add profile pictures for each loved one
+  - see your wishlist
+  - see all wishlists
+  - add wishlists
+  - delete wishlists
+  - update wishlists
+  - add gifts to wishlists 
+  - delete gifts
+  - update gifts
+  - mark whether a gift has been bought
+  - mark whether a gift has been wrapped
+  - make a Santas Secrets List for each of your loved ones that's related to their wishlist 
+
+
+## Stretch	Goals
+- add a field for where the gift is stored
+  
+    
+## Technology Used
+  - HTML
+  - CSS
+  - Express.js
+  - React
+  - Django/MongoDB
+  - React -Bootstrap
+  
+  
+## Application Wire Frames
+
+
+
+## Entity Relationship Diagrams
+
+
+## Route Table
+| HTTP Method| URL Path | Action | CRUD |
+_________________________________________
+| GET | /santasHelper | Index or list | Read |
+______________________________________________
+| GET | /santasHelper/:id | Show or Retrieve | Read |
+|     | /santasSecrets/:id |                 |      |
+_____________________________________________________
+| POST | /santasHelper | Create | Create |
+|      | /santasSecrets/|       |        |
+_____________________________________________________
+| PUT | /santasHelper/edit/:id | Update (edit) | Update |
+|     | /santasSecrets/edit/:id|               |        |
+_________________________________________________________
+| DELETE | /santasHelper/:id | Destroy | Delete |
+|        | /santasSecrets/edit/:id|    |        |
+_________________________________________________
+
+
+## Schedule
+
+- Friday 11/18: Project Planning, finish Readme, including wireframes and ERDs
+- Monday 11/21: Pitch idea, Seed db, Get the back end going
+- Tuesday 11/22: Testing with postman and make sure Back End is nearly good to go.
+- Saturday 11/26: Finish up Back End and start on Front End React
+- Sunday 10/31: Front End
+- Monday 11/1: Front End React, should be near MVP
+- Tuesday 11/2: Goal: MVP status, Work on Front End Styling, Deployment Party
+- Wednesday 11/3: Polish all details
+- Thursday 11/4: Polish all details
+- Friday 12/2: Presentation Day
+
+## MVP
+
+- An app that looks and functions at least as well as the Pet App we did in class, with a navigation bar, and div boxes that display the users resources and allows the user to edit and delete them as well as make updates to them and make secret lists for stocking stuffers.
+
+## Example Seed Data 
+
+```
+const startGifts = [
+    { name: "James", gift: "Schitt's Creek Game", type: "board game", bought: true, wrapped: true },
+    { name: "Vivi", gift: "Art Class Sweater", type: "clothing", bought: true, wrapped: false },
+    { name: "Beth", gift: "Magic Mixies", type: "toy", bought: false, wrapped: false },
+    { name: "Ryleigh", gift: "christmas pjs", type: "clothing", bought: false, wrapped: false },
+    { name: "Gavin", gift: "christmas pjs", type: "clothing", bought: false, wrapped: false }
+]
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
