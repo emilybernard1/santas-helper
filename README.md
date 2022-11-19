@@ -46,20 +46,20 @@ As a user I want the ability to...
 
 ## Route Table
 | HTTP Method| URL Path | Action | CRUD |
-------------------------------------------
+- - - - - - - - - - - - - - - - - - - - -
 | GET | /santasHelper | Index or list | Read |
-------------------------------------------
+- - - - - - - - - - - - - - - - - - - - -
 | GET | /santasHelper/:id | Show or Retrieve | Read |
 |     | /santasSecrets/:id |                 |      |
-------------------------------------------
+- - - - - - - - - - - - - - - - - - - - -
 | POST | /santasHelper | Create | Create |
 |      | /santasSecrets/|       |        |
-------------------------------------------
+- - - - - - - - - - - - - - - - - - - - -
 | PUT | /santasHelper/edit/:id | Update (edit) | Update |
 |     | /santasSecrets/edit/:id|               |        |
-------------------------------------------
+- - - - - - - - - - - - - - - - - - - - -
 |        | /santasSecrets/edit/:id|    |        |
-------------------------------------------
+- - - - - - - - - - - - - - - - - - - - -
 
 
 ## Schedule
