@@ -46,13 +46,21 @@ As a user I want the ability to...
 
 ## Route Table
 | HTTP METHOD| URL PATH               | ACTION            | CRUD    |
+
 | GET        | /santasHelper          | Index or list     | Read    |
+
 | GET        | /santasHelper/:id      | Show or Retrieve  | Read    |
+
 | GET        | /santasSecrets/:id     | Show or Retrieve  | Read    |
+
 | POST       | /santasHelper          | Create            | Create  |
+
 | POST       | /santasSecrets/        | Create            | Create  |
+
 | PUT        | /santasHelper/edit/:id | Update (edit)     | Update  |
+
 | PUT        | /santasSecrets/edit/:id| Update (edit)     | Update  |
+
 | PUT        | /santasSecrets/edit/:id| Update (edit)     | Update  |
 
 
