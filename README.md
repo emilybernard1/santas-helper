@@ -48,7 +48,7 @@ As a user I want the ability to...
 
 
 ## Entity Relationship Diagrams
-![erd](/images/ERD-SantasHelper.png "ERD")
+![erd](/images/ERD-SantasHelper2.png "ERD")
 
 
 ## Route Table
