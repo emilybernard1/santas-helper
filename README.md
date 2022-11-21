@@ -83,8 +83,10 @@ As a user I want the ability to...
 - Thursday 12/1: Polish all details
 - Friday 12/2: Presentation Day
 
+
 ## MVP
 - An app that looks and functions at least as well as the Pet App we did in class, with a navigation bar, and div boxes that display the users resources and allows the user to edit and delete them as well as make updates to them and make secret lists for stocking stuffers.
+
 
 ## Example Seed Data 
 ```
@@ -100,6 +102,8 @@ const startGifts = [
 
 # Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
 
 ## Available Scripts
 
