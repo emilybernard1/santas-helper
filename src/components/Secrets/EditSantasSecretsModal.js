@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Modal } from 'react-bootstrap'
 import SantasSecretsForm from '../shared/SantasSecretsForm'
-import { updateSantasSecrets } from '../../api/santasSecrets'
+// import { updateSantasSecrets } from '../../api/santasSecrets'
 import messages from '../shared/AutoDismissAlert/AutoDismissAlert'
 import { useParams } from 'react-router-dom'
 

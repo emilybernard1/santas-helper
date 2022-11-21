@@ -5,9 +5,9 @@ import { wishListIndex } from '../../api/wishList'
 
 const WishListIndex = ({ user, msgAlert }) => {
 
-    const candyCanePic = require('../shared/images/candy-cane.jpeg')
-    const christmasTreePic = require('../shared/images/christmas-tree.jpeg')
-    const giftPic = require('../shared/images/gift.jpeg')
+    const candyCanePic = require('../shared/images/candy-cane.png')
+    const christmasTreePic = require('../shared/images/christmas-tree.png')
+    const giftPic = require('../shared/images/gift.png')
     const setImage = (type) => {
 
         if (type === "CandyCane") {
@@ -50,7 +50,7 @@ const WishListIndex = ({ user, msgAlert }) => {
                                     {
                                         wishList.img
                                             ?
-                                            <> <Image fluid style={{ width: '200px', height: '200px', border: 'solid fuchsia' }} src={wishList.img} /></>
+                                            <> <Image fluid style={{ width: '200px', height: '200px', border: 'solid red' }} src={wishList.img} /></>
                                             :
                                             <> {setImage(wishList.type)} </>
                                     }

@@ -6,7 +6,7 @@ import EditWishListModal from './EditWishListModal'
 import UploadPicture from './UploadPictureModal'
 // import NewRatingModal from '../rating/NewRatingModal'
 // import ShowRating from '../rating/ShowRating'
-import NewSantasSecretModal from "../Messages/NewSantasSecretModal"
+import NewSantasSecretModal from "../Secrets/NewSantasSecretModal"
 
 import MessageOffCanvas from '../shared/MessageOfCanvas'
 

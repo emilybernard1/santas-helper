@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Button, Offcanvas } from "react-bootstrap";
-import ShowSantasSecret from "../Secrets/ShowSantasSecret";
+// import ShowSantasSecrets from "./Secrets/ShowSantasSecrets";
 
 const MessageOffCanvas = (props) => {
 
-  const { pet, user, msgAlert, setUpdated } = props
+  const { wishList, user, msgAlert, setUpdated } = props
   const santasSecrets = wishList.santasSecrets
   console.log('this is wishlist in props\n', wishList)
 
