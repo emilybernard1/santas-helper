@@ -1,6 +1,6 @@
 # Santa's Helper
 ## Overview
-This application is a full stack application where users can create wish lists of Christmas gifts and denote whether each item has been bought and wrapped. Users will also be able to keep a "wishlist for Santa" called Santa's Secrets.
+This is a full stack application where users can create wish lists of Christmas gifts and denote whether each item has been bought and wrapped. Users will also be able to keep a "wishlist for Santa" called "Santa's Secrets".
 
 ## Deployed Link
 TBD
@@ -9,9 +9,9 @@ TBD
 ## User Stories
 As a user I want the ability to...
   - sign in  or register
-  - make a wishlist for each your loved ones
+  - make a wishlist for each of your loved ones
   - add profile pictures for each loved one
-  - see your wishlist
+  - see one wishlist
   - see all wishlists
   - add wishlists
   - delete wishlists
