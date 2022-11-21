@@ -52,7 +52,7 @@ As a user I want the ability to...
 
 
 ## Route Table
-| # HTTP METHOD| # URL PATH               | # ACTION            | # CRUD    |
+| #HTTP METHOD| #URL PATH               | #ACTION            | #CRUD    |
 
 | GET        | /santasHelper          | Index or list     | Read    |
 
