@@ -51,7 +51,7 @@ As a user I want the ability to...
 
 
 ## Route Table
-![RouteTable](/images/SantasHelperRouteTable2.png "RouteTable")
+![RouteTable](/images/RouteTableSantasHelper2.png "RouteTable")
 
 
 ## Schedule
