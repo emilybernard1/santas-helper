@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Card, Container, Row, Col, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import { wishListIndex } from '../../api/wishList'
 
 const WishListIndex = ({ user, msgAlert }) => {
 
-    const candyCanePic = require('./shared/images/candy-cane.png')
-    const christmasTreePic = require('./shared/images/christmas-tree.png')
-    const giftPic = require('./shared/images/gift.png')
+    const candyCanePic = require('../shared/images/candy-cane.png')
+    const christmasTreePic = require('../shared/images/christmas-tree.png')
+    const giftPic = require('../shared/images/gift.png')
     const setImage = (type) => {
 
         if (type === "CandyCane") {
@@ -22,7 +21,7 @@ const WishListIndex = ({ user, msgAlert }) => {
     const [allWishLists, setAllWishLists] = useState([])
 
     useEffect(() => {
-        wishListIndex(user)
+        WishListIndex(user)
             .then(res => {
                 setAllWishLists(res.data.wishLists)
             })

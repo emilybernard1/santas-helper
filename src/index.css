@@ -2,13 +2,11 @@ body {
   margin: auto;
   font-family: 'Pompiere';
   font-weight: 200;
-  background-color: rgb(244, 247, 251);
-  background-image: url("75.png");
+  background-image: url("christmasbackground.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: red;
-
 }
 
 h1 {
@@ -29,7 +27,6 @@ h1 {
   justify-content: space-between;
   align-content: flex-start;
   align-items: flex-start;
-
 }
 
 .justify-content-end {

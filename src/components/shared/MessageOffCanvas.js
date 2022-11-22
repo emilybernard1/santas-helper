@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Offcanvas } from "react-bootstrap";
-import ShowSantasSecrets from "./Secrets/ShowSantasSecrets";
+import SantasSecrets from "./secrets/ShowSantasSecrets";
 
 const MessageOffCanvas = (props) => {
 
@@ -19,7 +19,7 @@ const MessageOffCanvas = (props) => {
       // map over the santasSecrets
       // produce one ShowSantasSecrets component for each of them
       santasSecretCards = wishList.santasSecrets.map(santasSecrets => (
-        <ShowSantasSecrets
+        <SantasSecrets
           key={santasSecrets._id}
           santasSecrets={santasSecrets}
           wishList={wishList}
@@ -36,7 +36,7 @@ const MessageOffCanvas = (props) => {
   return (
     <>
       <Button variant="primary" onClick={handleShow} style={{ color: "white" }}>
-        Send a Message to Santa
+        Santa's Secrets
       </Button>
 
       <Offcanvas show={show} onHide={handleClose}>

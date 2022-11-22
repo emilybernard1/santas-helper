@@ -1,13 +1,13 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container, Row, Col, Card, Button, ButtonGroup, Image } from 'react-bootstrap'
 import { useParams, useNavigate } from 'react-router-dom'
 import { wishListDelete, wishListShow } from '../../api/wishList'
 import EditWishListModal from './EditWishListModal'
 import UploadPicture from './UploadPictureModal'
-import NewSantasSecretModal from "../Secrets/NewSantasSecretModal"
-import SantasSecrets from "../Secrets/ShowSantasSecrets"
+import NewSantasSecretModal from "../secrets/NewSantasSecretModal"
+// import SantasSecrets from "../secrets/ShowSantasSecrets"
 
-import MessageOffCanvas from '../shared/MessageOfCanvas'
+import MessageOffCanvas from '../shared/MessageOffCanvas'
 
 const WishListShow = (props) => {
 
@@ -44,6 +44,7 @@ const WishListShow = (props) => {
     const candyCanePic = require('../shared/images/candy-cane.png')
     const christmasTreePic = require('../shared/images/christmas-tree.png')
     const giftPic = require('../shared/images/gift.png')
+
     const setImage = (type) => {
         if (!wishList.img) {
             if (type === "Candy Cane") {
@@ -122,7 +123,7 @@ const WishListShow = (props) => {
                                     <Button
                                         onClick={() => setEditModalShow(true)}
                                         className=" m-1 userbutton" variant="info">
-                                        <h4> Edit {wishList.name}'s Profile</h4>
+                                        <h4> Edit {wishList.name}'s Wish List</h4>
                                     </Button>
                                     <Button
                                         onClick={() => setUploadPictureShow(true)}
@@ -134,7 +135,7 @@ const WishListShow = (props) => {
                                         className=" m-1 userbutton"
                                         variant="danger"
                                     >
-                                        <h5> Delete {wishList.name}'s Profile </h5>
+                                        <h5> Delete {wishList.name}'s Wish List </h5>
                                     </Button>
                                 </Row>
                                 :
@@ -152,7 +153,8 @@ const WishListShow = (props) => {
                                     <h2>{wishList}</h2>
                                 </Card.Body>
                                 <Card.Footer >
-                                    <h2> {wishList.bought ? "I have been bought!" : 'Not bought yet. '}</h2>
+                                    <h2> {wishList.isBought ? "This gift has been bought!" : 'Not bought yet. '}</h2>
+                                    <h2> {wishList.isWrapped ? "This gift has been wrapped!" : 'Not wrapped yet. '}</h2>
                                 </Card.Footer>
                                 <Container className="justify-content-end">
                                     <ButtonGroup size='sm'>

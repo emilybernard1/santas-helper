@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Card, Button, ButtonGroup } from 'react-bootstrap'
-import { deleteSantasSecrets } from '../../api/santasSecrets'
-import EditSantasSecretsModal from './EditSantasSecretsModal'
+import { deleteSantasSecrets } from './api/santasSecrets'
+import EditSantasSecretsModal from './secrets/EditSantasSecretsModal'
 
 const SantasSecrets = (props) => {
     const { santasSecrets, wishList, user, msgAlert, triggerRefresh } = props
