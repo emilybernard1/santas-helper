@@ -49,19 +49,19 @@ As a user I want the ability to...
 ![RouteTable](/images/RouteTableSantasHelper.png "RouteTable")
 
 ## Schedule
-- Friday 11/18: Project Planning, finish Readme, including wireframes and ERDs
-- Monday 11/21: Pitch idea, Seed db, Get the back end going
-- Tuesday 11/22: Testing with postman and make sure Back End is nearly good to go.
-- Saturday 11/26: Finish up Back End and start on Front End React
-- Sunday 11/27: Front End
-- Monday 11/28: Front End React, should be near MVP
-- Tuesday 11/29: Goal: MVP status, Work on Front End Styling, Deployment Party
+- Friday 11/18: Project planning, finish readme, including wireframes and ERDs
+- Monday 11/21: Pitch idea, seed db, get the back end going
+- Tuesday 11/22: Testing with postman and make sure back end is nearly good to go
+- Saturday 11/26: Finish up back end and start on front end with react
+- Sunday 11/27: Front end with react
+- Monday 11/28: Front end with react, should be near MVP
+- Tuesday 11/29: Goal: MVP status, work on front end styling, deployment party
 - Wednesday 11/30: Polish all details
 - Thursday 12/1: Polish all details
-- Friday 12/2: Presentation Day
+- Friday 12/2: Presentation day
 
 ## MVP
-- An app that looks and functions at least as well as the Pet App we did in class, with a navigation bar, and div boxes that display the users resources and allows the user to edit and delete them as well as make updates to them and make secret lists for stocking stuffers.
+- An app that looks and functions on a basic level; with a navigation bar, div boxes that display the users wish lists for their loved ones, the capability to update and delete said lists, as well as make secret lists for stocking stuffers (Santa's Secrets).
 
 ## Example Seed Data 
 ```
