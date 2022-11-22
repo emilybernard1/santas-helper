@@ -5,11 +5,10 @@ This is a full stack application where users can create wish lists of Christmas 
 ## Deployed Link
 TBD
 
-
 ## User Stories
 As a user I want the ability to...
   - sign in  or register
-  - make a wishlist for each of your loved ones
+  - make a wishlist for each of my loved ones
   - add profile pictures for each loved one
   - see one wishlist
   - see all wishlists
@@ -21,7 +20,7 @@ As a user I want the ability to...
   - update gifts
   - mark whether a gift has been bought
   - mark whether a gift has been wrapped
-  - make a Santas Secrets List for each of your loved ones that's related to their wishlist 
+  - make a Santas Secrets List for each of my loved ones that's related to their wishlist 
 
 
 ## Stretch	Goals
@@ -33,7 +32,7 @@ As a user I want the ability to...
   - CSS
   - Express.js
   - React
-  - Django/MongoDB
+  - MongoDB
   - React -Bootstrap
   
   
@@ -52,23 +51,7 @@ As a user I want the ability to...
 
 
 ## Route Table
-| HTTP METHOD| URL PATH               | ACTION            | CRUD    |
-
-| GET        | /santasHelper          | Index or list     | Read    |
-
-| GET        | /santasHelper/:id      | Show or Retrieve  | Read    |
-
-| GET        | /santasSecrets/:id     | Show or Retrieve  | Read    |
-
-| POST       | /santasHelper          | Create            | Create  |
-
-| POST       | /santasSecrets/        | Create            | Create  |
-
-| PUT        | /santasHelper/edit/:id | Update (edit)     | Update  |
-
-| PUT        | /santasSecrets/edit/:id| Update (edit)     | Update  |
-
-| PUT        | /santasSecrets/edit/:id| Update (edit)     | Update  |
+![RouteTable](/images/RouteTable-SantasHelper.png "RouteTable")
 
 
 ## Schedule
@@ -91,14 +74,13 @@ As a user I want the ability to...
 ## Example Seed Data 
 ```
 const startGifts = [
-    { name: "James", gift: "Schitt's Creek Game", type: "board game", bought: true, wrapped: true },
-    { name: "Vivi", gift: "Art Class Sweater", type: "clothing", bought: true, wrapped: false },
-    { name: "Beth", gift: "Magic Mixies", type: "toy", bought: false, wrapped: false },
-    { name: "Ryleigh", gift: "christmas pjs", type: "clothing", bought: false, wrapped: false },
-    { name: "Gavin", gift: "christmas pjs", type: "clothing", bought: false, wrapped: false }
+    { name: "James", gift: "Schitt's Creek Game", type: "board game", isBought: true, isWrapped: true },
+    { name: "Vivi", gift: "Art Class Sweater", type: "clothing", isBought: true, isWrapped: false },
+    { name: "Beth", gift: "Magic Mixies", type: "toy", isBought: false, isWrapped: false },
+    { name: "Ryleigh", gift: "christmas pjs", type: "clothing", isBought: false, isWrapped: false },
+    { name: "Gavin", gift: "christmas pjs", type: "clothing", isBought: false, isWrapped: false }
 ]
 ```
-
 
 ## Available Scripts
 
