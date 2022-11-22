@@ -22,11 +22,9 @@ As a user I want the ability to...
   - mark whether a gift has been wrapped
   - make a Santas Secrets List for each of my loved ones that's related to their wishlist 
 
-
 ## Stretch	Goals
 - add a field for where the gift is stored
   
-    
 ## Technology Used
   - HTML
   - CSS
@@ -34,7 +32,6 @@ As a user I want the ability to...
   - React
   - MongoDB
   - React -Bootstrap
-  
   
 ## Application Wire Frames
 ![wireframe1](/images/WF1-SantasHelper.png "WireFrame1")
@@ -45,14 +42,11 @@ As a user I want the ability to...
 ![wireframe6](/images/WF6-SantasHelper.png "WireFrame6")
 ![wireframe7](/images/WF7-SantasHelper.png "WireFrame7")
 
-
 ## Entity Relationship Diagrams
-![erd](/images/ERD-SantasHelper2.png "ERD")
-
+![erd](/images/ERD-SantasHelper.png "ERD")
 
 ## Route Table
-![RouteTable](/images/RouteTableSantasHelper2.png "RouteTable")
-
+![RouteTable](/images/RouteTableSantasHelper.png "RouteTable")
 
 ## Schedule
 - Friday 11/18: Project Planning, finish Readme, including wireframes and ERDs
@@ -66,10 +60,8 @@ As a user I want the ability to...
 - Thursday 12/1: Polish all details
 - Friday 12/2: Presentation Day
 
-
 ## MVP
 - An app that looks and functions at least as well as the Pet App we did in class, with a navigation bar, and div boxes that display the users resources and allows the user to edit and delete them as well as make updates to them and make secret lists for stocking stuffers.
-
 
 ## Example Seed Data 
 ```
