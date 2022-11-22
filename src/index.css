@@ -3,6 +3,11 @@ body {
   font-family: 'Pompiere';
   font-weight: 200;
   background-color: rgb(244, 247, 251);
+  background-image: url("75.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: red;
 
 }
 
