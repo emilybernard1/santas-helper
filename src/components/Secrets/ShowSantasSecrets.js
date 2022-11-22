@@ -3,17 +3,17 @@ import { Card, Button, ButtonGroup } from 'react-bootstrap'
 import { deleteSantasSecrets } from '../../api/santasSecrets'
 import EditSantasSecretsModal from './EditSantasSecretsModal'
 
-const ShowSantasSecrets = (props) => {
-    const { santasSecret, wishList, user, msgAlert, triggerRefresh } = props
+const SantasSecrets = (props) => {
+    const { santasSecrets, wishList, user, msgAlert, triggerRefresh } = props
     console.log('this is the props', props)
     console.log('this is the wishList in showWishList\n', wishList)
-    console.log('this is the santasSecret \n', santasSecret)
+    console.log('this is the santasSecrets \n', santasSecrets)
 
     const [editSantasSecretsModalShow, setEditSantasSecretsModalShow] = useState(false)
     const userString = JSON.stringify(props.user.email)
 
     const destroySantasSecrets = () => {
-        deleteSantasSecrets(user, wishList._id, santasSecret._id)
+        deleteSantasSecrets(user, wishList._id, santasSecrets._id)
             .then(() => {
                 msgAlert({
                     heading: 'Secret deleted!',
@@ -34,9 +34,9 @@ const ShowSantasSecrets = (props) => {
     return (
         <>
             <Card className="m-1" border="primary">
-                <Card.Header> <h3> Santa's Secrets {santasSecret.name} </h3> </Card.Header>
+                <Card.Header> <h3> Santa's Secrets {santasSecrets.name} </h3> </Card.Header>
                 <Card.Body>
-                    <h4> { santasSecret.secret } </h4>
+                    <h4> { santasSecrets.secret } </h4>
                     {/* <h4> { santasSecret.daysAvailable }  </h4> */}
                    
                 </Card.Body>
@@ -79,7 +79,7 @@ const ShowSantasSecrets = (props) => {
             <EditSantasSecretsModal
                 user={user}
                 wishList={wishList}
-                santasSecret={santasSecret}
+                santasSecret={santasSecrets}
                 msgAlert={msgAlert}
                 triggerRefresh={triggerRefresh}
                 show={editSantasSecretsModalShow}
@@ -89,4 +89,4 @@ const ShowSantasSecrets = (props) => {
     )
 }
 
-export default ShowSantasSecrets
+export default SantasSecrets

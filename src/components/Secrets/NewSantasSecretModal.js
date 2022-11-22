@@ -25,7 +25,7 @@ const NewSantasSecretModal = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        createSantasSecrets(user, pet._id, santasSecret)
+        createSantasSecrets(user, wishList._id, santasSecret)
             .then(() => handleClose())
             .then(() => triggerRefresh())
             .then(() => msgAlert({

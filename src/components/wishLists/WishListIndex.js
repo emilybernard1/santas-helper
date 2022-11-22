@@ -5,9 +5,9 @@ import { wishListIndex } from '../../api/wishList'
 
 const WishListIndex = ({ user, msgAlert }) => {
 
-    const candyCanePic = require('../shared/images/candy-cane.png')
-    const christmasTreePic = require('../shared/images/christmas-tree.png')
-    const giftPic = require('../shared/images/gift.png')
+    const candyCanePic = require('./shared/images/candy-cane.png')
+    const christmasTreePic = require('./shared/images/christmas-tree.png')
+    const giftPic = require('./shared/images/gift.png')
     const setImage = (type) => {
 
         if (type === "CandyCane") {

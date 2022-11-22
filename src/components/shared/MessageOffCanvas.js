@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Offcanvas } from "react-bootstrap";
-// import ShowSantasSecrets from "./Secrets/ShowSantasSecrets";
+import ShowSantasSecrets from "./Secrets/ShowSantasSecrets";
 
 const MessageOffCanvas = (props) => {
 
@@ -17,17 +17,17 @@ const MessageOffCanvas = (props) => {
     console.log("this is the wishList in WISHLISTCARDS", wishList)
     if (santasSecrets.length > 0) {
       // map over the santasSecrets
-      // produce one ShowSantasSecret component for each of them
-      santasSecretCards = pet.santasSecrets.map(santasSecret => (
-        <ShowSantasSecret
+      // produce one ShowSantasSecrets component for each of them
+      santasSecretCards = wishList.santasSecrets.map(santasSecrets => (
+        <ShowSantasSecrets
           key={santasSecrets._id}
-          santasSecret={santasSecret}
+          santasSecrets={santasSecrets}
           wishList={wishList}
           user={user}
           msgAlert={msgAlert}
           triggerRefresh={() => setUpdated(prev => !prev)}
         />
-      ))
+      )) 
     } else {
       santasSecretCards = <h2>No secrets yet 😭</h2>
     }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Modal } from 'react-bootstrap'
 import SantasSecretsForm from '../shared/SantasSecretsForm'
-// import { updateSantasSecrets } from '../../api/santasSecrets'
+import { updateSantasSecrets } from '../../api/ShowSantasSecrets'
 import messages from '../shared/AutoDismissAlert/AutoDismissAlert'
 import { useParams } from 'react-router-dom'
 
@@ -9,21 +9,21 @@ import { useParams } from 'react-router-dom'
 const EditSantasSecretsModal = (props) => {
     const {
         user, show, handleClose,
-        msgAlert, triggerRefresh, pet
+        msgAlert, triggerRefresh, wishList
     } = props
 
-    const {wishListId, secretId} = useParams()
-    const [santasSecret, setSantasSecret] = useState(props.santasSecret)
+    const {wishListId, santasSecretsId} = useParams()
+    const [santasSecrets, setSantasSecrets] = useState(props.santasSecret)
 
     const handleChange = (e) => {
-        setSantasSecret(prevSantasSecret => {
+        setSantasSecrets(prevSantasSecrets => {
             const name = e.target.name
             let value = e.target.value
 
-            const updatedSantasSecret = { [name]: value }
+            const updatedSantasSecrets = { [name]: value }
 
             return {
-                ...prevSantasSecret, ...updatedSantasSecret
+                ...prevSantasSecrets, ...updatedSantasSecrets
     
             }
         })
@@ -32,7 +32,7 @@ const EditSantasSecretsModal = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         
-        updateSantasSecret(user, wishList._id,  santasSecret)
+        updateSantasSecrets(user, wishList._id,  santasSecrets)
             .then(() => handleClose())
             .then(() => {
                 msgAlert({
@@ -56,7 +56,7 @@ const EditSantasSecretsModal = (props) => {
             <Modal.Header closeButton />
             <Modal.Body>
                 <SantasSecretsForm
-                    santasSecret={santasSecret}
+                    santasSecrets={santasSecrets}
                     handleChange={handleChange}
                     handleSubmit={handleSubmit}
                     heading="Let Santa know what to bring this person!"

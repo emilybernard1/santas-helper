@@ -1,7 +1,7 @@
 import apiUrl from '../apiConfig'
 import axios from 'axios'
 
-export const imageCreate = async (giftListId, user, imgFile) => {
+export const imageCreate = async (wishListId, user, imgFile) => {
 	await axios({
 		method: 'POST',
 		url: `${apiUrl}/image/${wishListId}`,

@@ -2,7 +2,7 @@ import React from "react"
 import { Container, Image } from 'react-bootstrap'
 
 const Home = (props) => {
-	// const { msgAlert, user } = props
+	const { msgAlert, user } = props
 	console.log('props in home', props)
 	const picture = require("./images/christmasbackground.png")
 	return (

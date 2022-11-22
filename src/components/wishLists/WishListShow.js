@@ -4,9 +4,8 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { wishListDelete, wishListShow } from '../../api/wishList'
 import EditWishListModal from './EditWishListModal'
 import UploadPicture from './UploadPictureModal'
-// import NewRatingModal from '../rating/NewRatingModal'
-// import ShowRating from '../rating/ShowRating'
 import NewSantasSecretModal from "../Secrets/NewSantasSecretModal"
+import SantasSecrets from "../Secrets/ShowSantasSecrets"
 
 import MessageOffCanvas from '../shared/MessageOfCanvas'
 
@@ -17,8 +16,6 @@ const WishListShow = (props) => {
     const [wishList, setWishList] = useState(null)
     const [editModalShow, setEditModalShow] = useState(false)
     const [uploadPictureShow, setUploadPictureShow] = useState(false)
-    // const [NewRatingShow, setNewRatingShow] = useState(false)
-    // const [ShowRating, setShowRating] = useState(false)
     const [updated, setUpdated] = useState(false)
     const [deleted, setDeleted] = useState(false)
     const [santasSecretModalShow, setSantasSecretModalShow] = useState(false)
@@ -26,27 +23,6 @@ const WishListShow = (props) => {
 
     const { id } = useParams()
     const navigate = useNavigate()
-
-    // const makeRatingCards = () => {
-    //     let ratingCards = []
-    //     console.log("inside make rating cards before if", pet)
-    //     if (pet && pet.rating.length > 0) {
-    //         // map over the ratings
-    //         // produce one ShowRating component for each of them
-    //         console.log("making rating cards if")
-    //         ratingCards = pet.rating.map(rating => (
-    //             <ShowRating
-    //                 key={rating._id}
-    //                 rating={rating}
-    //                 pet={pet}
-    //                 user={user}
-    //                 msgAlert={msgAlert}
-    //                 triggerRefresh={() => setUpdated(prev => !prev)}
-    //             />
-    //         ))
-    //     }
-    //     return (ratingCards)
-    // }
 
     useEffect(() => {
         wishListShow(user, id)
@@ -65,9 +41,9 @@ const WishListShow = (props) => {
     }, [updated])
 
 
-    const candyCanePic = require('../shared/images/candy-cane.jpeg')
-    const christmasTreePic = require('../shared/images/christmas-tree.jpeg')
-    const giftPic = require('../shared/images/gift.jpeg')
+    const candyCanePic = require('../shared/images/candy-cane.png')
+    const christmasTreePic = require('../shared/images/christmas-tree.png')
+    const giftPic = require('../shared/images/gift.png')
     const setImage = (type) => {
         if (!wishList.img) {
             if (type === "Candy Cane") {
@@ -176,18 +152,10 @@ const WishListShow = (props) => {
                                     <h2>{wishList}</h2>
                                 </Card.Body>
                                 <Card.Footer >
-                                    <h2> {item.bought ? "I have been bought!" : 'Not bought yet. '}</h2>
+                                    <h2> {wishList.bought ? "I have been bought!" : 'Not bought yet. '}</h2>
                                 </Card.Footer>
                                 <Container className="justify-content-end">
                                     <ButtonGroup size='sm'>
-                                        {/* <Button
-                                            style={{ color: "white" }}
-                                            size='sm'
-                                            onClick={() => setNewRatingShow(true)}
-                                            className="m-2"
-                                            variant="info">
-                                            <h4> Rate your date with {pet.name}! </h4>
-                                        </Button> */}
                                         <Button
                                             style={{ color: "white" }}
                                             size='sm'
@@ -202,11 +170,7 @@ const WishListShow = (props) => {
 
 
                         </Container>
-                        {/* <Container>
-                            {wishList ? makeRatingCards() : <><p>rating cards go here</p></>}
-                        </Container> */}
-
-
+ 
                         <NewSantasSecretModal
                             user={user}
                             wishList={wishList}
@@ -242,16 +206,6 @@ const WishListShow = (props) => {
 
                 </Row>
 
-                {/* <Col>
-                    <NewRatingModal
-                        user={user}
-                        pet={pet}
-                        show={NewRatingShow}
-                        msgAlert={msgAlert}
-                        triggerRefresh={() => setUpdated(prev => !prev)}
-                        handleClose={() => setNewRatingShow(false)}
-                    />
-                </Col> */}
             </Container>
 
         </Container>
