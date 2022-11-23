@@ -10,8 +10,9 @@ const WishListCreate = ({ user, msgAlert }) => {
 		name: '',
 		img: '',
 		item: '',
-		bought: false,
+		isBought: false,
 		isWrapped: false,
+		type: 'candy-cane',
 	}
 	const [wishList, setWishList] = useState(defaultWishList)
 
@@ -19,7 +20,7 @@ const WishListCreate = ({ user, msgAlert }) => {
 	const handleCheck = () => {
 		console.log("clicked")
 		setWishList(prevWishList => {
-			return { ...prevWishList, bought: !prevWishList.bought }
+			return { ...prevWishList, isBought: !prevWishList.isBought }
 		})
 	}
 
@@ -39,9 +40,9 @@ const WishListCreate = ({ user, msgAlert }) => {
 			let updatedValue = e.target.value
 			console.log(updatedValue)
 
-			if (updatedName === 'bought' && e.target.checked) {
+			if (updatedName === 'isBought' && e.target.checked) {
 				updatedValue = true
-			} else if (updatedName === 'bought' && !e.target.checked) {
+			} else if (updatedName === 'isBought' && !e.target.checked) {
 				updatedValue = false
 			}
 
@@ -59,7 +60,7 @@ const WishListCreate = ({ user, msgAlert }) => {
 	}
 	const handleCreateWishList = (e) => {
 		e.preventDefault()
-
+		console.log("this is the wishList", wishList)
 		wishListCreate(wishList, user)
 			//    .then(res => { navigate(`/santasHelper/${res.data.wishList._id}`)})
 			.then(res => { navigate(`/santasHelper`) })

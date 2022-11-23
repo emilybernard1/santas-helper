@@ -1,5 +1,5 @@
-// import { Cloudinary } from "@cloudinary/url-gen";
-import { Cloudinary } from 'cloudinary';
+import { Cloudinary } from "@cloudinary/url-gen";
+// import { Cloudinary } from 'cloudinary';
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { useNavigate, useParams } from 'react-router-dom'

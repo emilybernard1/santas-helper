@@ -24,6 +24,7 @@ const NewSantasSecretModal = (props) => {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
+        console.log("this is santa's secret", santasSecret)
 
         createSantasSecrets(user, wishList._id, santasSecret)
             .then(() => handleClose())

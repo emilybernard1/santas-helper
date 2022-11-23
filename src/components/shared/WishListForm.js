@@ -1,11 +1,12 @@
 import React from 'react'
 import { Form, Button, Container } from 'react-bootstrap'
 import GiftCheckBox from './GiftCheckBox'
+import WrappedCheckBox from './WrappedCheckBox'
 
 
 const WishListForm = (props) => {
     // here are the props we're going to bring into our form
-    const { wishList, handleChange, heading, handleSubmit, handleCheck } = props
+    const { wishList, handleChange, heading, handleSubmit, handleCheck, handleCheckWrapped } = props
     console.log(wishList.bought)
 
     return (
@@ -29,27 +30,17 @@ const WishListForm = (props) => {
                     value={wishList.item}
                     onChange={handleChange}
                 />
-                {/* <Form.Label>Breed:</Form.Label>
-                <Form.Control
-                    placeholder="Border Collie, Tabby Cat, Good Boy"
-                    name="breed"
-                    id="breed"
-                    value={pet.breed}
-                    onChange={handleChange}
-                />
-                <Form.Label>Likes:</Form.Label>
-                <Form.Control
-                    placeholder="What does your pet like to do?"
-                    name="likes"
-                    id="likes"
-                    value={pet.likes}
-                    onChange={handleChange}
-                /> */}
                 <br></br>
                 <GiftCheckBox
                     label="Has this item been bought?"
-                    value={wishList.bought}
+                    value={wishList.isBought}
                     onChange={handleCheck}
+                />
+                <br></br>
+                <WrappedCheckBox
+                    label="Has this item been wrapped?"
+                    value={wishList.isWrapped}
+                    onChange={handleCheckWrapped}
                 />
                 <br></br>
                 <br></br>

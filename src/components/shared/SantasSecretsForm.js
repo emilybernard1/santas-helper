@@ -26,14 +26,6 @@ const SantasSecretForm = (props) => {
                     value={santasSecret.secret}
                     onChange={handleChange}
                 />
-                {/* <Form.Label>When are you available?:</Form.Label>
-                <Form.Control
-                    placeholder="What times and days are you available?"
-                    name="daysAvailable"
-                    id="daysAvailable"
-                    value={petMessage.daysAvailable}
-                    onChange={handleChange}
-                /> */}
                 <Button className=" m-3 justify-content-end" type="submit"> Submit </Button>
             </Form>
         </Container>

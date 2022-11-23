@@ -1,15 +1,15 @@
 import React from "react";
 
-const GiftCheckBox = ({ label, value, onChange }) => {
+const WrappedCheckBox = ({ label, value, onChange }) => {
 
     return (
         <label>
             <div>
-                <input
+                 <input
                     type="checkbox"
                     checked={value}
-                    label="Has this item been bought?"
-                    name="isBought"
+                    label="Has this item been wrapped?"
+                    name="isWrapped"
                     onChange={onChange}
                 />
             </div>
@@ -18,5 +18,4 @@ const GiftCheckBox = ({ label, value, onChange }) => {
     )
 }
 
-export default GiftCheckBox
-
+export default WrappedCheckBox

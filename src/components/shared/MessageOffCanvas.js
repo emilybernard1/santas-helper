@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Offcanvas } from "react-bootstrap";
-import SantasSecrets from "./secrets/ShowSantasSecrets";
+import SantasSecrets from "../secrets/ShowSantasSecrets";
 
 const MessageOffCanvas = (props) => {
 

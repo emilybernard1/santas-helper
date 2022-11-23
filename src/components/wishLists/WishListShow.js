@@ -41,9 +41,9 @@ const WishListShow = (props) => {
     }, [updated])
 
 
-    const candyCanePic = require('../shared/images/candy-cane.png')
-    const christmasTreePic = require('../shared/images/christmas-tree.png')
-    const giftPic = require('../shared/images/gift.png')
+    const candyCanePic = require('../shared/images/candy-cane.jpeg')
+    const christmasTreePic = require('../shared/images/christmas-tree.jpeg')
+    const giftPic = require('../shared/images/gift.jpeg')
 
     const setImage = (type) => {
         if (!wishList.img) {
@@ -146,11 +146,12 @@ const WishListShow = (props) => {
                     <Col xl={6}>
                         <Container fluid style={{ width: "100%" }}>
                             <Card className='mt-3'>
-                                <Card.Header><h1 style={{ color: '#eb50b8' }}>Hi! My name is {wishList.name}</h1> </Card.Header>
+                                <Card.Header><h1 style={{ color: '#eb50b8' }}>Hi! My name is {wishList.name}</h1> 
+                                </Card.Header>
                                 <Card.Body>
-                                    {/* <h2>I am a {pet.typeOfPet}, more specifically I am a {pet.breed}!</h2> */}
+                                    <h2>Please choose an image {wishList.type}</h2>
                                     <h2 className='text-center'>Here's a wish list for me: </h2>
-                                    <h2>{wishList}</h2>
+                                    <h2>{wishList.item}</h2>
                                 </Card.Body>
                                 <Card.Footer >
                                     <h2> {wishList.isBought ? "This gift has been bought!" : 'Not bought yet. '}</h2>

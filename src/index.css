@@ -2,7 +2,7 @@ body {
   margin: auto;
   font-family: 'Pompiere';
   font-weight: 200;
-  background-image: url("christmasbackground.png");
+  background-image: url("./components/shared/images/christmasbackground.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

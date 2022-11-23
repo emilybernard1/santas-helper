@@ -4,7 +4,7 @@ import { Container, Image } from 'react-bootstrap'
 const Home = (props) => {
 	const { msgAlert, user } = props
 	console.log('props in home', props)
-	const picture = require("./shared/images/christmasbackground.png")
+	const picture = require("./shared/images/christmasbackground.jpeg")
 	return (
 		<>
 			<Container fluid className='center'>
@@ -18,3 +18,4 @@ const Home = (props) => {
 }
 
 export default Home
+

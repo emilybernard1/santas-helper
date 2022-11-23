@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Card, Container, Row, Col, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { wishListIndex } from '../../api/wishList'
 
 const WishListIndex = ({ user, msgAlert }) => {
 
-    const candyCanePic = require('../shared/images/candy-cane.png')
-    const christmasTreePic = require('../shared/images/christmas-tree.png')
-    const giftPic = require('../shared/images/gift.png')
+    const candyCanePic = require('../shared/images/candy-cane.jpeg')
+    const christmasTreePic = require('../shared/images/christmas-tree.jpeg')
+    const giftPic = require('../shared/images/gift.jpeg')
     const setImage = (type) => {
 
         if (type === "CandyCane") {
@@ -21,8 +22,9 @@ const WishListIndex = ({ user, msgAlert }) => {
     const [allWishLists, setAllWishLists] = useState([])
 
     useEffect(() => {
-        WishListIndex(user)
+        wishListIndex(user)
             .then(res => {
+                console.log(res.data)
                 setAllWishLists(res.data.wishLists)
             })
             .catch((error) => {
@@ -58,7 +60,7 @@ const WishListIndex = ({ user, msgAlert }) => {
                         </Col>
                         <Col>
                             <Card.Title style={{ fontFamily: 'Oswald' }}>{wishList.name.toUpperCase()}</Card.Title>
-                            <Card.Text style={{ color: '#eb50b8' }}>{wishList.type}</Card.Text>
+                            <Card.Text style={{ color: 'black' }}>{wishList.type}</Card.Text>
                         </Col>
                     </Row>
                 </Card.Text>

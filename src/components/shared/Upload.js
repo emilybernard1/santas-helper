@@ -9,7 +9,7 @@ const Upload = ({ user, wishList }) => {
 
 	const [previewSource, setPreviewSource] = useState('')
 
-	const { petId } = useParams()
+	const { wishListId } = useParams()
 	const navigate = useNavigate()
 
 	//show the user the picture they selected
