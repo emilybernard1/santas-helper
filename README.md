@@ -24,6 +24,7 @@ As a user I want the ability to...
 
 ## Stretch	Goals
 - add a field for where the gift is stored
+- have a checkbox where the user can chose an image to go with the wish list: either a candy-cane, christmas tree, or a gift box
   
 ## Technology Used
   - HTML
@@ -31,6 +32,8 @@ As a user I want the ability to...
   - Express.js
   - React
   - MongoDB
+  - Python
+  - Django
   - React -Bootstrap
   
 ## Application Wire Frames
@@ -66,7 +69,7 @@ As a user I want the ability to...
 ## Example Seed Data 
 ```
 const startGifts = [
-    { name: "James", gift: "Schitt's Creek Game", type: "board game", isBought: true, isWrapped: true },
+    { name: "Corgi", gift: "Schitt's Creek Game", type: "board game", isBought: true, isWrapped: true },
     { name: "Vivi", gift: "Art Class Sweater", type: "clothing", isBought: true, isWrapped: false },
     { name: "Beth", gift: "Magic Mixies", type: "toy", isBought: false, isWrapped: false },
     { name: "Ryleigh", gift: "christmas pjs", type: "clothing", isBought: false, isWrapped: false },
