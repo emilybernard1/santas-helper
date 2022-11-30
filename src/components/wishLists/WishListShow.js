@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { Container, Row, Col, Card, Button, ButtonGroup, Image } from 'react-bootstrap'
 import { useParams, useNavigate } from 'react-router-dom'
 import { wishListDelete, wishListShow } from '../../api/wishList'
 import EditWishListModal from './EditWishListModal'
 import UploadPicture from './UploadPictureModal'
 import NewSantasSecretModal from "../secrets/NewSantasSecretModal"
-// import SantasSecrets from "../secrets/ShowSantasSecrets"
+import SantasSecrets from "../secrets/ShowSantasSecrets"
 
 import MessageOffCanvas from '../shared/MessageOffCanvas'
 
@@ -47,9 +47,9 @@ const WishListShow = (props) => {
 
     const setImage = (type) => {
         if (!wishList.img) {
-            if (type === "Candy Cane") {
+            if (type === "CandyCane") {
                 return <Image fluid style={{ width: '80%', height: '80%', }} src={candyCanePic} />
-            } else if (type === "Christmas Tree") {
+            } else if (type === "ChristmasTree") {
                 return <Image fluid style={{ width: '80%', height: '80%', }} src={christmasTreePic} />
             } else {
                 return <Image fluid style={{ width: '80%', height: '80%', }} src={giftPic} />
@@ -125,11 +125,11 @@ const WishListShow = (props) => {
                                         className=" m-1 userbutton" variant="info">
                                         <h4> Edit {wishList.name}'s Wish List</h4>
                                     </Button>
-                                    <Button
+                                    {/* <Button
                                         onClick={() => setUploadPictureShow(true)}
-                                        className=" m-1 userbutton" variant="secondary">
+                                        className=" m-1 userbutton" variant="primary">
                                         <h4> Edit {wishList.name}'s Picture </h4>
-                                    </Button>
+                                    </Button> */}
                                     <Button
                                         onClick={() => handleDeleteWishList()}
                                         className=" m-1 userbutton"
@@ -146,16 +146,18 @@ const WishListShow = (props) => {
                     <Col xl={6}>
                         <Container fluid style={{ width: "100%" }}>
                             <Card className='mt-3'>
-                                <Card.Header><h1 style={{ color: '#eb50b8' }}>Hi! My name is {wishList.name}</h1> 
+                                <Card.Header><h1 style={{ color: 'red' }}>{wishList.name}'s Wish List:</h1> 
                                 </Card.Header>
                                 <Card.Body>
-                                    <h2>Please choose an image {wishList.type}</h2>
-                                    <h2 className='text-center'>Here's a wish list for me: </h2>
+                                    {/* <h2>Please choose an image {wishList.typeOfWishList}</h2> */}
+                                    {/* <h2 className='text-left'>Here's a wish list for me: </h2>
+                                    <br></br> */}
                                     <h2>{wishList.item}</h2>
                                 </Card.Body>
                                 <Card.Footer >
-                                    <h2> {wishList.isBought ? "This gift has been bought!" : 'Not bought yet. '}</h2>
-                                    <h2> {wishList.isWrapped ? "This gift has been wrapped!" : 'Not wrapped yet. '}</h2>
+                                    <br></br>
+                                    <h3> {wishList.isBought ? "This gift has been bought!" : 'Not bought yet. '}</h3>
+                                    <h3> {wishList.isWrapped ? "This gift has been wrapped!" : 'Not wrapped yet. '}</h3>
                                 </Card.Footer>
                                 <Container className="justify-content-end">
                                     <ButtonGroup size='sm'>
@@ -196,14 +198,14 @@ const WishListShow = (props) => {
                     </Col>
                     <Row>
                         <Col>
-                            <UploadPicture
+                            {/* <UploadPicture
                                 user={user}
                                 wishList={wishList}
                                 show={uploadPictureShow}
                                 msgAlert={msgAlert}
                                 triggerRefresh={() => setUpdated(prev => !prev)}
                                 handleClose={() => setUploadPictureShow(false)}
-                            />
+                            /> */}
                         </Col>
                     </Row>
 

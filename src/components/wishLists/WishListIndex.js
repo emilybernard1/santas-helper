@@ -10,9 +10,9 @@ const WishListIndex = ({ user, msgAlert }) => {
     const giftPic = require('../shared/images/gift.jpeg')
     const setImage = (type) => {
 
-        if (type === "CandyCane") {
+        if (type === "CANDYCANE") {
             return <Image fluid src={candyCanePic} />
-        } else if (type === "ChristmasTree") {
+        } else if (type === "CHRISTMASTREE") {
             return <Image fluid src={christmasTreePic} />
         } else {
             return <Image fluid src={giftPic} />
@@ -53,14 +53,14 @@ const WishListIndex = ({ user, msgAlert }) => {
                                             ?
                                             <> <Image fluid style={{ width: '200px', height: '200px', border: 'solid red' }} src={wishList.img} /></>
                                             :
-                                            <> {setImage(wishList.type)} </>
+                                            <> {setImage(wishList.typeOfWishList)} </>
                                     }
                                 </Container>
                             </Link>
                         </Col>
                         <Col>
                             <Card.Title style={{ fontFamily: 'Oswald' }}>{wishList.name.toUpperCase()}</Card.Title>
-                            <Card.Text style={{ color: 'black' }}>{wishList.type}</Card.Text>
+                            <Card.Text style={{ color: 'black' }}>{wishList.typeOfWishList}</Card.Text>
                         </Col>
                     </Row>
                 </Card.Text>

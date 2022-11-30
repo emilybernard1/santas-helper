@@ -35,3 +35,4 @@ export const deleteSantasSecrets = (user, wishListId, santasSecretsId) => {
 		}
 	})
 }
+

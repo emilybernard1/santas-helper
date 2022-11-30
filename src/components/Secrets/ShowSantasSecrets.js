@@ -3,6 +3,7 @@ import { Card, Button, ButtonGroup } from 'react-bootstrap'
 import { deleteSantasSecrets } from '../../api/santasSecrets'
 import EditSantasSecretsModal from './EditSantasSecretModal'
 
+
 const SantasSecrets = (props) => {
     const { santasSecrets, wishList, user, msgAlert, triggerRefresh } = props
     console.log('this is the props', props)
@@ -31,14 +32,31 @@ const SantasSecrets = (props) => {
             })
     }
 
+    const sendSantasSecrets = () => {
+        sendSantasSecrets(user, wishList._id, santasSecrets._id)
+            .then(() => {
+                msgAlert({
+                    heading: 'Your wishlist for {wishList.name} has been sent!',
+                    message: 'Sending to the North Pole!',
+                    variant: 'success'
+                })
+            })
+            .then(() => triggerRefresh())
+            .catch(() => {
+                msgAlert({
+                    heading: 'Oh no!',
+                    message: 'Something went wrong!',
+                    variant: 'danger'
+                })
+            })
+    }
+
     return (
         <>
             <Card className="m-1" border="primary">
-                <Card.Header> <h3> Santa's Secrets {santasSecrets.name} </h3> </Card.Header>
+                <Card.Header> <h3> Dear Santa, please bring {santasSecrets.name} the following gifts: </h3> </Card.Header>
                 <Card.Body>
                     <h4> { santasSecrets.secret } </h4>
-                    {/* <h4> { santasSecret.daysAvailable }  </h4> */}
-                   
                 </Card.Body>
                 <Card.Footer>
                     { 
@@ -51,23 +69,15 @@ const SantasSecrets = (props) => {
                                 variant="secondary"
                                 onClick={() => setEditSantasSecretsModalShow(true)}
                             >
-                                {/* { user && santasSecrets.author && userString == rating.author } */}
                                 Edit Secrets
                             </Button>
                             <Button 
                                 className="m-1"
-                                variant="danger"
+                                color="red"
                                 onClick={() => destroySantasSecrets()}
                             >
                                 Delete Secret
-                            </Button>  
-                            <Button 
-                                className=" disabled m-1"
-                                variant="info"
-                                
-                            >
-                                Add more info
-                            </Button> 
+                            </Button>    
                          </ButtonGroup>
                         </>  
                         :

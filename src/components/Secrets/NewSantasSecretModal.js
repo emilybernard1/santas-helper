@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Modal } from 'react-bootstrap'
-import SantasSecretsForm from '../shared/SantasSecretsForm'
+import SantasSecretsForm from './SantasSecretsForm'
 import { createSantasSecrets } from '../../api/santasSecrets'
 
 const NewSantasSecretModal = (props) => {
