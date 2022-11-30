@@ -1,6 +1,6 @@
 import React from "react";
 
-const GiftCheckBox = ({ label, value, onChange }) => {
+const GiftCheckBox = ({ label, value, onChange, handleChange}) => {
 
     return (
         <label>
@@ -10,7 +10,7 @@ const GiftCheckBox = ({ label, value, onChange }) => {
                     checked={value}
                     label="Has this item been bought?"
                     name="isBought"
-                    onChange={onChange}
+                    onChange={handleChange}
                 />
             </div>
             {label}

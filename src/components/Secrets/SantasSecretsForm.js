@@ -22,7 +22,7 @@ const SantasSecretForm = (props) => {
                 <Form.Label>Wish List for Santa:</Form.Label>
                 <Form.Control
                     placeholder="what would you like Santa to bring this person..."
-                    name="name"
+                    name="secret"
                     id="secret"
                     value={santasSecrets.secret}
                     onChange={handleChange}

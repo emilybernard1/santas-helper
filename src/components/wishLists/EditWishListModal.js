@@ -39,28 +39,29 @@ const EditWishListModal = (props) => {
         })
     }
 
-    //console.log("the wishList", wishList)
+    console.log("the wishList", wishList)
     const handleChange = (e) => {
         setWishList(prevWishList => {
             const updatedName = e.target.name
             let updatedValue = e.target.value
             console.log(updatedValue)
 
-            if (updatedName === 'bought' && e.target.checked) {
+            if (updatedName === 'isBought' && e.target.checked) {
                 updatedValue = true
-            } else if (updatedName === 'bought' && !e.target.checked) {
+            } else if (updatedName === 'isBought' && !e.target.checked) {
                 updatedValue = false
             }
 
-            if (updatedName === "isWrapped") {
-                updatedValue = e.target.value.toUpperCase()
-            } else if (updatedName === "name") {
-                updatedValue = e.target.value
-            } else if (updatedName === "not wrapped") {
-                updatedValue = e.target.value
+            if (updatedName === 'isWrapped' && e.target.checked) {
+                updatedValue = true
+            } else if (updatedName === 'isWrapped' && !e.target.checked) {
+                updatedValue = false
             }
+
             const updatedWishList = { [updatedName]: updatedValue }
+
             console.log(updatedWishList)
+
             return { ...prevWishList, ...updatedWishList }
         })
     }
@@ -68,7 +69,7 @@ const EditWishListModal = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        wishListUpdate(wishList, user, id)
+        wishListUpdate(wishList, user, props._id)
             .then(() => handleClose())
             .then(() => {
                 msgAlert({
@@ -95,8 +96,9 @@ const EditWishListModal = (props) => {
                     wishList={wishList}
                     handleChange={handleChange}
                     handleSubmit={handleSubmit}
-                    heading="Update Wish List"
                     handleCheck={handleCheck}
+                    // onClick={handleUpdateWishList}
+                    heading="Update Wish List"
                 />
             </Modal.Body>
         </Modal>

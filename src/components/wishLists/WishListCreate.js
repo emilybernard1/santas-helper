@@ -46,22 +46,23 @@ const WishListCreate = ({ user, msgAlert }) => {
 				updatedValue = false
 			}
 
-			if (updatedName === "isWrapped") {
-				updatedValue = e.target.value.toUpperCase()
-			} else if (updatedName === "name") {
-				updatedValue = e.target.value
-			} else if (updatedName === "notWrapped") {
-				updatedValue = e.target.value
+			if (updatedName === 'isWrapped' && e.target.checked) {
+				updatedValue = true
+			} else if (updatedName === 'isWrapped' && !e.target.checked) {
+				updatedValue = false
 			}
+
 			const updatedWishList = { [updatedName]: updatedValue }
+
 			console.log(updatedWishList)
+
 			return { ...prevWishList, ...updatedWishList }
 		})
 	}
 	const handleCreateWishList = (e) => {
 		e.preventDefault()
 		console.log("this is the wishList", wishList)
-		wishListCreate(wishList, user)
+		wishListCreate(wishList._id, user)
 			//    .then(res => { navigate(`/santasHelper/${res.data.wishList._id}`)})
 			.then(res => { navigate(`/santasHelper`) })
 			.then(() => {

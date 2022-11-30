@@ -12,7 +12,7 @@ const EditSantasSecretsModal = (props) => {
     } = props
 
     const {wishListId, santasSecretsId} = useParams()
-    const [santasSecrets, setSantasSecrets] = useState(props.santasSecret)
+    const [santasSecrets, setSantasSecrets] = useState(props.santasSecrets)
 
     const handleChange = (e) => {
         setSantasSecrets(prevSantasSecrets => {

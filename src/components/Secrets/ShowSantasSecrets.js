@@ -32,24 +32,6 @@ const SantasSecrets = (props) => {
             })
     }
 
-    const sendSantasSecrets = () => {
-        sendSantasSecrets(user, wishList._id, santasSecrets._id)
-            .then(() => {
-                msgAlert({
-                    heading: 'Your wishlist for {wishList.name} has been sent!',
-                    message: 'Sending to the North Pole!',
-                    variant: 'success'
-                })
-            })
-            .then(() => triggerRefresh())
-            .catch(() => {
-                msgAlert({
-                    heading: 'Oh no!',
-                    message: 'Something went wrong!',
-                    variant: 'danger'
-                })
-            })
-    }
 
     return (
         <>

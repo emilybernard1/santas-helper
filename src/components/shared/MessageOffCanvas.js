@@ -35,7 +35,7 @@ const MessageOffCanvas = (props) => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow} style={{ color: "white" }}>
+      <Button id="button" variant="primary" onClick={handleShow} style={{ color: "white" }}>
         Santa's Secrets
       </Button>
 

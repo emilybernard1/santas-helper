@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, Button, ButtonGroup, Image } from 'react-boo
 import { useParams, useNavigate } from 'react-router-dom'
 import { wishListDelete, wishListShow } from '../../api/wishList'
 import EditWishListModal from './EditWishListModal'
-import UploadPicture from './UploadPictureModal'
+// import UploadPicture from './UploadPictureModal'
 import NewSantasSecretModal from "../secrets/NewSantasSecretModal"
 import SantasSecrets from "../secrets/ShowSantasSecrets"
 
@@ -15,7 +15,7 @@ const WishListShow = (props) => {
 
     const [wishList, setWishList] = useState(null)
     const [editModalShow, setEditModalShow] = useState(false)
-    const [uploadPictureShow, setUploadPictureShow] = useState(false)
+    // const [uploadPictureShow, setUploadPictureShow] = useState(false)
     const [updated, setUpdated] = useState(false)
     const [deleted, setDeleted] = useState(false)
     const [santasSecretModalShow, setSantasSecretModalShow] = useState(false)
@@ -167,6 +167,7 @@ const WishListShow = (props) => {
                                             onClick={() => setSantasSecretModalShow(true)}
                                             className="m-2"
                                             variant="info"
+                                            id="button"
                                             filter="drop-shadow(5px 5px 5px #abadb0)">
                                             <h4>Send a message to Santa!</h4>
                                         </Button>

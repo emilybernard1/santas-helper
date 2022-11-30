@@ -1,6 +1,6 @@
 import React from "react";
 
-const WrappedCheckBox = ({ label, value, onChange }) => {
+const WrappedCheckBox = ({ label, value, onChange, handleChange }) => {
 
     return (
         <label>
@@ -10,7 +10,7 @@ const WrappedCheckBox = ({ label, value, onChange }) => {
                     checked={value}
                     label="Has this item been wrapped?"
                     name="isWrapped"
-                    onChange={onChange}
+                    onChange={handleChange}
                 />
             </div>
             {label}
