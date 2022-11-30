@@ -82,6 +82,8 @@ const WishListCreate = ({ user, msgAlert }) => {
 	}
 	return (
 		<>
+		<br></br>
+		<br></br>
 			<WishListForm
 				wishList={wishList}
 				handleChange={handleChange}

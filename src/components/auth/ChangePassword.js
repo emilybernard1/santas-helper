@@ -75,7 +75,7 @@ const ChangePassword = (props) => {
                         />
                     </Form.Group>
                     <br></br>
-                    <Button variant='primary' type='submit'>
+                    <Button variant='primary' type='submit' className="button">
                         Submit
                     </Button>
                 </Form>

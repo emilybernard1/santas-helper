@@ -48,14 +48,14 @@ const WishListShow = (props) => {
     const setImage = (type) => {
         if (!wishList.img) {
             if (type === "CandyCane") {
-                return <Image fluid style={{ width: '80%', height: '80%', }} src={candyCanePic} />
+                return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={candyCanePic} />
             } else if (type === "ChristmasTree") {
-                return <Image fluid style={{ width: '80%', height: '80%', }} src={christmasTreePic} />
+                return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={christmasTreePic} />
             } else {
-                return <Image fluid style={{ width: '80%', height: '80%', }} src={giftPic} />
+                return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={giftPic} />
             }
         } else {
-            return <Image fluid style={{ width: '100%', height: '100%', border: 'solid #d838f2' }} src={wishList.img} />
+            return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={wishList.img} />
         }
     }
 
@@ -146,7 +146,7 @@ const WishListShow = (props) => {
                     <Col xl={6}>
                         <Container fluid style={{ width: "100%" }}>
                             <Card className='mt-3'>
-                                <Card.Header><h1 style={{ color: 'red' }}>{wishList.name}'s Wish List:</h1> 
+                                <Card.Header><h1 style={{ color: 'red' }}>{wishList.name}'s Wish</h1> 
                                 </Card.Header>
                                 <Card.Body>
                                     {/* <h2>Please choose an image {wishList.typeOfWishList}</h2> */}
@@ -166,7 +166,8 @@ const WishListShow = (props) => {
                                             size='sm'
                                             onClick={() => setSantasSecretModalShow(true)}
                                             className="m-2"
-                                            variant="info">
+                                            variant="info"
+                                            filter="drop-shadow(5px 5px 5px #abadb0)">
                                             <h4>Send a message to Santa!</h4>
                                         </Button>
                                     </ButtonGroup>

@@ -2,7 +2,7 @@ body {
   margin: auto;
   font-family: 'Pompiere';
   font-weight: 200;
-  background-image: url("./components/shared/images/christmasbackground.jpeg");
+  background-image: url("./components/shared/images/treeandsnow4.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -40,9 +40,26 @@ h1 {
 }
 
 .userbutton {
-  filter: drop-shadow(5px 5px 5px #abadb0);
+  filter: drop-shadow(5px 5px 5px #565758);
 }
 
 img {
   border-radius: 3%;
+}
+
+.button {
+  filter: drop-shadow(5px 5px 5px #565758);
+}
+
+.text {
+  color: red
+}
+
+.left {
+  margin-left: 200px;
+  margin-top: 65px;
+}
+
+#button {
+  filter: drop-shadow(5px 5px 5px #565758);
 }

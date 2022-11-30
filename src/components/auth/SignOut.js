@@ -37,10 +37,10 @@ const SignOut = (props) => {
                     <br></br>
                     <br></br>
                     <ButtonGroup>
-                        <Button variant='danger' onClick={onSignOut}>
+                        <Button className="button" variant='danger' onClick={onSignOut}>
                             Sign Out
                         </Button>
-                        <Button variant='warning' onClick={onCancel}>
+                        <Button className="button" variant='warning' onClick={onCancel}>
                             Cancel
                         </Button>
                     </ButtonGroup>

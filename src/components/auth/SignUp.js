@@ -86,7 +86,7 @@ const SignUp = (props) => {
                         />
                     </Form.Group>
                     <br></br>
-                    <Button variant='primary' type='submit'>
+                    <Button className="button" variant='primary' type='submit'>
                         Submit
                     </Button>
                 </Form>
