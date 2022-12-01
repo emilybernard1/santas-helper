@@ -11,9 +11,12 @@ TBD
   - Express.js
   - React
   - MongoDB
+  - React 
+  - Bootstrap
+
+(for alternate backend)
   - Python
   - Django
-  - React -Bootstrap
 
 ## User Stories
 As a user I want the ability to...
