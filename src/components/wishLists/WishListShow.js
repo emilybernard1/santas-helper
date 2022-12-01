@@ -27,9 +27,7 @@ const WishListShow = (props) => {
     useEffect(() => {
         wishListShow(user, id)
             .then((res) => {
-                console.log(res.data.wishList)
                 setWishList(res.data.wishList)
-                console.log("this is the id in the updated useeffect", id) //this is the id in the updated useEffect
             })
             .catch((error) => {
                 msgAlert({

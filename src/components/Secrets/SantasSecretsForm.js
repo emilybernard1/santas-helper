@@ -5,8 +5,6 @@ import santasSecrets from './ShowSantasSecrets'
 const SantasSecretForm = (props) => {
     const { santasSecret, wishList, handleChange, handleSubmit, heading } = props
 
-    console.log('this is santasSecret in the form\n', santasSecret)
-
     return (
         <Container className="justify-content-center" style={{ fontFamily: "Oswald" }}>
             <h3>{heading}</h3>
