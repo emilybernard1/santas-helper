@@ -55,12 +55,6 @@ As a user I want the ability to...
 ![wireframe6](/images/WF6-SantasHelper.png "WireFrame6")
 ![wireframe7](/images/WF7-SantasHelper.png "WireFrame7")
 
-## Entity Relationship Diagrams
-![erd](/images/ERD-SantasHelper.png "ERD")
-
-## Route Table
-![RouteTable](/images/RouteTableSantasHelper.png "RouteTable")
-
 ## Schedule
 - Friday 11/18: Project planning, finish readme, including wireframes and ERDs
 - Monday 11/21: Pitch idea, seed db, get the back end going
