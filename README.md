@@ -39,6 +39,7 @@ As a user I want the ability to...
 - add a field for where the gift is stored
 - have a checkbox where the user can chose an image to go with the wish list: either a candy-cane, christmas tree, or a gift box
 - make it so users can upload pictures of the recipients to go with their wish lists
+- make it so the gifts show up in separate fields so they can individually be marked as bought or wrapped, rather than all or nothing
   
 ## Application Wire Frames
 ![wireframe1](/images/WF1-SantasHelper.png "WireFrame1")
