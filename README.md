@@ -45,6 +45,7 @@ As a user I want the ability to...
 - make it so users can upload pictures of the recipients to go with their wish lists
 - make it so the gifts show up in separate fields so they can individually be marked as bought or wrapped, rather than all or nothing
 - style the Santa's Secrets so it looks more like a roll of parchment and so that the messages become one big message, rather than individual messages
+- have Santa's Secrets pop out from the right rather than the left and switch which side the Santa's Secrets button is on. 
   
 ## Application Wire Frames
 ![wireframe1](/images/WF1-SantasHelper.png "WireFrame1")
