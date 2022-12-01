@@ -5,11 +5,20 @@ This is a full stack application where users can create wish lists of Christmas 
 ## Deployed Link
 TBD
 
+## Technology Used
+  - HTML
+  - CSS
+  - Express.js
+  - React
+  - MongoDB
+  - Python
+  - Django
+  - React -Bootstrap
+
 ## User Stories
 As a user I want the ability to...
   - sign in  or register
   - make a wishlist for each of my loved ones
-  - add profile pictures for each loved one
   - see one wishlist
   - see all wishlists
   - add wishlists
@@ -25,16 +34,11 @@ As a user I want the ability to...
 ## Stretch	Goals
 - add a field for where the gift is stored
 - have a checkbox where the user can chose an image to go with the wish list: either a candy-cane, christmas tree, or a gift box
-  
-## Technology Used
-  - HTML
-  - CSS
-  - Express.js
-  - React
-  - MongoDB
-  - Python
-  - Django
-  - React -Bootstrap
+
+## Version 2
+- add a field for where the gift is stored
+- have a checkbox where the user can chose an image to go with the wish list: either a candy-cane, christmas tree, or a gift box
+- make it so users can upload pictures of the recipients to go with their wish lists
   
 ## Application Wire Frames
 ![wireframe1](/images/WF1-SantasHelper.png "WireFrame1")
