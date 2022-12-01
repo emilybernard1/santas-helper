@@ -8,10 +8,11 @@ TBD
 ## Technology Used
   - HTML
   - CSS
-  - Express.js
-  - React
+  - Mongoose
   - MongoDB
+  - Express.js
   - React 
+  - Node 
   - Bootstrap
 
 (for alternate backend)
