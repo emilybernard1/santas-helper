@@ -6,10 +6,6 @@ import EditSantasSecretsModal from './EditSantasSecretModal'
 
 const SantasSecrets = (props) => {
     const { santasSecret, wishList, user, msgAlert, triggerRefresh } = props
-    console.log('this is the props', props)
-    console.log('this is the wishList in showWishList\n', wishList)
-    console.log('this is the santasSecrets \n', santasSecret)
-
     const [editSantasSecretsModalShow, setEditSantasSecretsModalShow] = useState(false)
     const userString = JSON.stringify(props.user.email)
 
@@ -38,36 +34,35 @@ const SantasSecrets = (props) => {
             <Card className="m-1" border="primary">
                 <Card.Header> <h3> Dear Santa, please bring {santasSecret.name} the following gifts: </h3> </Card.Header>
                 <Card.Body>
-                    <h4> { santasSecret.secret } </h4>
+                    <h4> {santasSecret.secret} </h4>
                 </Card.Body>
                 <Card.Footer>
-                    { 
-                        user && wishList.owner && user._id === wishList.owner._id 
-                        ?
-                        <>
-                        <ButtonGroup>
-                            <Button
-                                className="m-1"
-                                variant="secondary"
-                                onClick={() => setEditSantasSecretsModalShow(true)}
-                            >
-                                Edit Secrets
-                            </Button>
-                            <Button 
-                                className="m-1"
-                                color="red"
-                                onClick={() => destroySantasSecrets()}
-                            >
-                                Delete Secret
-                            </Button>    
-                         </ButtonGroup>
-                        </>  
-                        :
-                        null
+                    {
+                        user && wishList.owner && user._id === wishList.owner._id
+                            ?
+                            <>
+                                <ButtonGroup>
+                                    <Button
+                                        className="m-1"
+                                        variant="secondary"
+                                        onClick={() => setEditSantasSecretsModalShow(true)}
+                                    >
+                                        Edit Secrets
+                                    </Button>
+                                    <Button
+                                        className="m-1"
+                                        color="red"
+                                        onClick={() => destroySantasSecrets()}
+                                    >
+                                        Delete Secret
+                                    </Button>
+                                </ButtonGroup>
+                            </>
+                            :
+                            null
                     }
                 </Card.Footer>
             </Card>
-
             <EditSantasSecretsModal
                 user={user}
                 wishList={wishList}

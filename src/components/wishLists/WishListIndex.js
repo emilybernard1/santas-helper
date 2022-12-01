@@ -24,7 +24,6 @@ const WishListIndex = ({ user, msgAlert }) => {
     useEffect(() => {
         wishListIndex(user)
             .then(res => {
-                console.log(res.data)
                 setAllWishLists(res.data.wishLists)
             })
             .catch((error) => {
@@ -35,8 +34,6 @@ const WishListIndex = ({ user, msgAlert }) => {
                 })
             })
     }, [])
-
-
 
     const wishListCards = allWishLists.map(wishList => (
 

@@ -11,9 +11,9 @@ const EditSantasSecretsModal = (props) => {
         msgAlert, triggerRefresh, wishList
     } = props
 
-    const {wishListId, santasSecretsId} = useParams()
+    const { wishListId, santasSecretsId } = useParams()
     const [santasSecret, setSantasSecret] = useState(props.santasSecret)
-    console.log("this is santa's secrets edit modal", props.santasSecret)
+
     const handleChange = (e) => {
         setSantasSecret(prevSantasSecret => {
             const name = e.target.name
@@ -23,14 +23,13 @@ const EditSantasSecretsModal = (props) => {
 
             return {
                 ...prevSantasSecret, ...updatedSantasSecret
-    
             }
         })
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        
+
         updateSantasSecrets(user, wishList.id, santasSecret)
             .then(() => handleClose())
             .then(() => {

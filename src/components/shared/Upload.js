@@ -18,8 +18,6 @@ const Upload = ({ user, wishList }) => {
 		const reader = new FileReader()
 		//converts image to string
 		reader.readAsDataURL(file)
-		console.log(file)
-
 		reader.onloadend = () => {
 			setPreviewSource(reader.result)
 		}
@@ -28,8 +26,6 @@ const Upload = ({ user, wishList }) => {
 	const handleFileInputChange = (e) => {
 		const file = e.target.files[0]
 		previewFile(file)
-		console.log(previewSource)
-
 	}
 
 	const uploadImage = async (previewSource) => {
@@ -43,7 +39,6 @@ const Upload = ({ user, wishList }) => {
 	}
 
 	const handSubmitFile = (e) => {
-		console.log('submitting')
 		e.preventDefault()
 		if (!previewSource) return;
 		uploadImage(previewSource)

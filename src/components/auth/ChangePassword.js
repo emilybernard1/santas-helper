@@ -8,7 +8,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 const ChangePassword = (props) => {
-   
+
     const [oldPassword, setOldPassword] = useState('')
     const [newPassword, setNewPassword] = useState('')
 
@@ -18,8 +18,6 @@ const ChangePassword = (props) => {
         event.preventDefault()
 
         const { msgAlert, user } = props
-        console.log('the user', user)
-
 
         const passwords = { oldPassword, newPassword }
 
@@ -42,8 +40,6 @@ const ChangePassword = (props) => {
                 })
             })
     }
-
-
 
     return (
         <div className='row'>

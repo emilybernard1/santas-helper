@@ -11,7 +11,6 @@ const EditWishListModal = (props) => {
         user, show, handleClose,
         msgAlert, triggerRefresh
     } = props
-    //console.log("this is the props.wishList in editWishListModal\n", props.wishList)
 
     const [wishList, setWishList] = useState(props.wishList)
 
@@ -21,7 +20,6 @@ const EditWishListModal = (props) => {
         wishListShow(user, id)
             .then((res) => {
                 setWishList(res.data.wishList)
-                console.log("this is the id", id)
             })
             .catch((error) => {
                 msgAlert({
@@ -32,20 +30,23 @@ const EditWishListModal = (props) => {
             })
     }, [])
 
-    // const handleCheck = () => {
-    //     console.log("clicked")
-    //     setWishList(prevWishList => {
-    //         return { ...prevWishList, available: !prevWishList.available }
-    //     })
-    // }
+    const handleCheck = () => {
+        setWishList(prevWishList => {
+            return { ...prevWishList, isBought: !prevWishList.isBought }
+        })
+    }
 
-    console.log("the wishList", wishList)
+    // this checks whether the item has been wrapped
+    const handleCheckWrapped = () => {
+        setWishList(prevWishList => {
+            return { ...prevWishList, isWrapped: !prevWishList.isWrapped }
+        })
+    }
 
     const handleChange = (e) => {
         setWishList(prevWishList => {
             const updatedName = e.target.name
             let updatedValue = e.target.value
-            console.log(updatedValue)
 
             if (updatedName === 'isBought' && e.target.checked) {
                 updatedValue = true
@@ -60,9 +61,7 @@ const EditWishListModal = (props) => {
             }
 
             const updatedWishList = { [updatedName]: updatedValue }
-
-            console.log(updatedWishList)
-
+            
             return { ...prevWishList, ...updatedWishList }
         })
     }
@@ -97,9 +96,9 @@ const EditWishListModal = (props) => {
                     wishList={wishList}
                     handleChange={handleChange}
                     handleSubmit={handleSubmit}
-                    // onClick={handleUpdateWishList}
                     heading="Update Wish List"
-                    // handleCheck={handleCheck}
+                    handleCheck={handleCheck}
+                    handleCheckWrapped={handleCheckWrapped}
                 />
             </Modal.Body>
         </Modal>

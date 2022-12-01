@@ -8,7 +8,7 @@ const NewSantasSecretModal = (props) => {
         user, wishList, show, handleClose, msgAlert, triggerRefresh
     } = props
 
-    const [santasSecret, setSantasSecret] = useState({name: wishList.name, secret: ''})
+    const [santasSecret, setSantasSecret] = useState({ name: wishList.name, secret: '' })
 
     const handleChange = (e) => {
         setSantasSecret(prevSantasSecret => {
@@ -24,7 +24,6 @@ const NewSantasSecretModal = (props) => {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log("this is santa's secret", santasSecret)
 
         createSantasSecrets(user, wishList._id, santasSecret)
             .then(() => handleClose())
@@ -34,7 +33,6 @@ const NewSantasSecretModal = (props) => {
                 message: "Youpi! your message has been sent to Santa at the North Pole!",
                 variant: 'success'
             }))
-            // .then(() => triggerRefresh())
             .catch(msgAlert({
                 heading: "Oh no!",
                 message: "something went wrong",

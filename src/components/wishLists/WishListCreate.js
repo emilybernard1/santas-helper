@@ -16,18 +16,16 @@ const WishListCreate = ({ user, msgAlert }) => {
 	}
 	const [wishList, setWishList] = useState(defaultWishList)
 
-    // this checks whether the item has been bought
+	// this checks whether the item has been bought
 	const handleCheck = () => {
-		console.log("clicked")
 		setWishList(prevWishList => {
 			return { ...prevWishList, isBought: !prevWishList.isBought }
 		})
 	}
 
 
-    // this checks whether the item has been wrapped
-    const handleCheckWrapped = () => {
-		console.log("clicked")
+	// this checks whether the item has been wrapped
+	const handleCheckWrapped = () => {
 		setWishList(prevWishList => {
 			return { ...prevWishList, isWrapped: !prevWishList.isWrapped }
 		})
@@ -38,7 +36,6 @@ const WishListCreate = ({ user, msgAlert }) => {
 		setWishList(prevWishList => {
 			const updatedName = e.target.name
 			let updatedValue = e.target.value
-			console.log(updatedValue)
 
 			if (updatedName === 'isBought' && e.target.checked) {
 				updatedValue = true
@@ -54,16 +51,13 @@ const WishListCreate = ({ user, msgAlert }) => {
 
 			const updatedWishList = { [updatedName]: updatedValue }
 
-			console.log(updatedWishList)
-
 			return { ...prevWishList, ...updatedWishList }
 		})
 	}
 	const handleCreateWishList = (e) => {
 		e.preventDefault()
-		console.log("this is the wishList", wishList)
-		wishListCreate(wishList._id, user)
-			//    .then(res => { navigate(`/santasHelper/${res.data.wishList._id}`)})
+	
+		wishListCreate(wishList, user)
 			.then(res => { navigate(`/santasHelper`) })
 			.then(() => {
 				msgAlert({
@@ -73,7 +67,6 @@ const WishListCreate = ({ user, msgAlert }) => {
 				})
 			})
 			.catch((error) => {
-				console.log(error)
 				msgAlert({
 					heading: 'Failure',
 					message: 'Create Wish List Failure' + error,
@@ -83,15 +76,15 @@ const WishListCreate = ({ user, msgAlert }) => {
 	}
 	return (
 		<>
-		<br></br>
-		<br></br>
+			<br></br>
+			<br></br>
 			<WishListForm
 				wishList={wishList}
 				handleChange={handleChange}
 				heading="Add a new wish list!"
 				handleSubmit={handleCreateWishList}
 				handleCheck={handleCheck}
-                handleCheckWrapped={handleCheckWrapped}
+				handleCheckWrapped={handleCheckWrapped}
 			/>
 		</>
 	)

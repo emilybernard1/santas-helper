@@ -7,7 +7,6 @@ import WrappedCheckBox from './WrappedCheckBox'
 const WishListForm = (props) => {
     // here are the props we're going to bring into our form
     const { wishList, handleChange, heading, handleSubmit, handleCheck, handleCheckWrapped } = props
-    console.log(wishList.bought)
 
     return (
         <Container className="justify-content-center" style={{ fontFamily: "Oswald" }}>
@@ -34,17 +33,17 @@ const WishListForm = (props) => {
                 <GiftCheckBox
                     label="Has this item been bought?"
                     value={wishList.isBought}
-                    onChange={handleChange}
+                    onChange={handleCheck}
                 />
                 <br></br>
                 <WrappedCheckBox
                     label="Has this item been wrapped?"
                     value={wishList.isWrapped}
-                    onChange={handleChange}
+                    onChange={handleCheckWrapped}
                 />
                 <br></br>
                 <br></br>
-                <Button type="submit">Submit</Button>
+                <Button id="button" type="submit">Submit</Button>
             </Form>
         </Container>
     )

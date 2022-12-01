@@ -5,7 +5,7 @@ const WrappedCheckBox = ({ label, value, onChange, handleChange }) => {
     return (
         <label>
             <div>
-                 <input
+                <input
                     type="checkbox"
                     checked={value}
                     label="Has this item been wrapped?"

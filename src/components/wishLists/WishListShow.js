@@ -27,9 +27,7 @@ const WishListShow = (props) => {
     useEffect(() => {
         wishListShow(user, id)
             .then((res) => {
-                console.log(res.data.wishList)
                 setWishList(res.data.wishList)
-                console.log("this is the id in the updated useeffect", id) //this is the id in the updated useEffect
             })
             .catch((error) => {
                 msgAlert({
@@ -54,7 +52,7 @@ const WishListShow = (props) => {
     //             })
     //         })
     // }
-    
+
     const candyCanePic = require('../shared/images/candy-cane.jpeg')
     const christmasTreePic = require('../shared/images/christmas-tree.jpeg')
     const giftPic = require('../shared/images/gift.jpeg')
@@ -160,7 +158,7 @@ const WishListShow = (props) => {
                     <Col xl={6}>
                         <Container fluid style={{ width: "100%" }}>
                             <Card className='mt-3'>
-                                <Card.Header><h1 style={{ color: 'red' }}>{wishList.name}'s Wish List</h1> 
+                                <Card.Header><h1 style={{ color: 'red' }}>{wishList.name}'s Wish List</h1>
                                 </Card.Header>
                                 <Card.Body>
                                     {/* <h2>Please choose an image {wishList.typeOfWishList}</h2> */}
@@ -191,7 +189,7 @@ const WishListShow = (props) => {
 
 
                         </Container>
- 
+
                         <NewSantasSecretModal
                             user={user}
                             wishList={wishList}

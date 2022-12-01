@@ -1,12 +1,11 @@
+$primary: #e22024;
 
-		$primary: #e22024;
-		
-		$secondary: #065b24;
-		$background: rgb(240, 241, 241);
-		$dark:#382a27;
-		$danger: #fff38d;
-		$info:#066f17;
-		$success: #ab101c;
-		$enable-negative-margins: true;
+$secondary: #065b24;
+$background: rgb(240, 241, 241);
+$dark: #382a27;
+$danger: #fff38d;
+$info: #066f17;
+$success: #ab101c;
+$enable-negative-margins: true;
 
 @import '~bootstrap/scss/bootstrap.scss'

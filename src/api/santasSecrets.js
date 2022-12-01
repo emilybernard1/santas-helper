@@ -3,8 +3,6 @@ import axios from 'axios'
 
 // CREATE
 export const createSantasSecrets = (user, wishListId, newSantasSecrets) => {
-	console.log('the user in createSantasSecrets', user)
-	console.log('the newSantasSecrets in createSantasSecrets', newSantasSecrets)
 	return axios({
 		url: `${apiUrl}/santasSecrets/${wishListId}`,
 		method: 'POST',
@@ -21,8 +19,7 @@ export const getSantasSecrets = (user, wishListId) => {
 }
 
 // UPDATE Santa's Secrets
-export const updateSantasSecrets = (user, wishListId,  updatedSantasSecrets) => {
-    console.log('this is updatedSantasSecrets', updatedSantasSecrets)
+export const updateSantasSecrets = (user, wishListId, updatedSantasSecrets) => {
 	return axios({
 		url: `${apiUrl}/santasSecrets/${wishListId}/${updatedSantasSecrets._id}`,
 		method: 'PATCH',

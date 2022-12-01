@@ -1,6 +1,6 @@
 import React from "react";
 
-const GiftCheckBox = ({ label, value, onChange, handleChange}) => {
+const GiftCheckBox = ({ label, value, onChange, handleChange }) => {
 
     return (
         <label>

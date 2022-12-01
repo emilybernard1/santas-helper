@@ -3,7 +3,6 @@ import { Container, Image } from 'react-bootstrap'
 
 const Home = (props) => {
 	const { msgAlert, user } = props
-	console.log('props in home', props)
 	const picture = require("./shared/images/christmasborder2.jpeg")
 	return (
 		<>
