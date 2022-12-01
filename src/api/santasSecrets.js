@@ -12,6 +12,14 @@ export const createSantasSecrets = (user, wishListId, newSantasSecrets) => {
 	})
 }
 
+// GET Santa's Secrets
+export const getSantasSecrets = (user, wishListId) => {
+	return axios({
+		url: `${apiUrl}/santasSecrets/${wishListId}`,
+		method: 'GET'
+	})
+}
+
 // UPDATE Santa's Secrets
 export const updateSantasSecrets = (user, wishListId,  updatedSantasSecrets) => {
     console.log('this is updatedSantasSecrets', updatedSantasSecrets)

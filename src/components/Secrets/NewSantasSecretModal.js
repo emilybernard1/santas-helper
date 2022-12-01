@@ -8,7 +8,7 @@ const NewSantasSecretModal = (props) => {
         user, wishList, show, handleClose, msgAlert, triggerRefresh
     } = props
 
-    const [santasSecret, setSantasSecret] = useState({})
+    const [santasSecret, setSantasSecret] = useState({name: wishList.name, secret: ''})
 
     const handleChange = (e) => {
         setSantasSecret(prevSantasSecret => {

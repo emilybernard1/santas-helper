@@ -12,17 +12,17 @@ const EditSantasSecretsModal = (props) => {
     } = props
 
     const {wishListId, santasSecretsId} = useParams()
-    const [santasSecrets, setSantasSecrets] = useState(props.santasSecrets)
-
+    const [santasSecret, setSantasSecret] = useState(props.santasSecret)
+    console.log("this is santa's secrets edit modal", props.santasSecret)
     const handleChange = (e) => {
-        setSantasSecrets(prevSantasSecrets => {
+        setSantasSecret(prevSantasSecret => {
             const name = e.target.name
             let value = e.target.value
 
-            const updatedSantasSecrets = { [name]: value }
+            const updatedSantasSecret = { [name]: value }
 
             return {
-                ...prevSantasSecrets, ...updatedSantasSecrets
+                ...prevSantasSecret, ...updatedSantasSecret
     
             }
         })
@@ -31,7 +31,7 @@ const EditSantasSecretsModal = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         
-        updateSantasSecrets(user, wishList._id,  santasSecrets)
+        updateSantasSecrets(user, wishList.id, santasSecret)
             .then(() => handleClose())
             .then(() => {
                 msgAlert({
@@ -55,7 +55,7 @@ const EditSantasSecretsModal = (props) => {
             <Modal.Header closeButton />
             <Modal.Body>
                 <SantasSecretsForm
-                    santasSecrets={santasSecrets}
+                    santasSecret={santasSecret}
                     handleChange={handleChange}
                     handleSubmit={handleSubmit}
                     heading="Let Santa know what to bring this person!"

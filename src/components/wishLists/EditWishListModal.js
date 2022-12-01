@@ -32,14 +32,15 @@ const EditWishListModal = (props) => {
             })
     }, [])
 
-    const handleCheck = () => {
-        console.log("clicked")
-        setWishList(prevWishList => {
-            return { ...prevWishList, available: !prevWishList.available }
-        })
-    }
+    // const handleCheck = () => {
+    //     console.log("clicked")
+    //     setWishList(prevWishList => {
+    //         return { ...prevWishList, available: !prevWishList.available }
+    //     })
+    // }
 
     console.log("the wishList", wishList)
+
     const handleChange = (e) => {
         setWishList(prevWishList => {
             const updatedName = e.target.name
@@ -69,7 +70,7 @@ const EditWishListModal = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        wishListUpdate(wishList, user, props._id)
+        wishListUpdate(wishList, user, props.wishList.id)
             .then(() => handleClose())
             .then(() => {
                 msgAlert({
@@ -96,9 +97,9 @@ const EditWishListModal = (props) => {
                     wishList={wishList}
                     handleChange={handleChange}
                     handleSubmit={handleSubmit}
-                    handleCheck={handleCheck}
                     // onClick={handleUpdateWishList}
                     heading="Update Wish List"
+                    // handleCheck={handleCheck}
                 />
             </Modal.Body>
         </Modal>

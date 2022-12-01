@@ -10,7 +10,7 @@ const GiftCheckBox = ({ label, value, onChange, handleChange}) => {
                     checked={value}
                     label="Has this item been bought?"
                     name="isBought"
-                    onChange={handleChange}
+                    onChange={onChange}
                 />
             </div>
             {label}

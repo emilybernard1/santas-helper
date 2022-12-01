@@ -11,17 +11,17 @@ const MessageOffCanvas = (props) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  console.log("this is santa's secrets", santasSecrets)
   let santasSecretCards
   if (wishList) {
     console.log("this is the wishList in WISHLISTCARDS", wishList)
     if (santasSecrets.length > 0) {
       // map over the santasSecrets
       // produce one ShowSantasSecrets component for each of them
-      santasSecretCards = wishList.santasSecrets.map(santasSecrets => (
+      santasSecretCards = wishList.santasSecrets.map(santasSecret => (
         <SantasSecrets
-          key={santasSecrets._id}
-          santasSecrets={santasSecrets}
+          key={santasSecret._id}
+          santasSecret={santasSecret}
           wishList={wishList}
           user={user}
           msgAlert={msgAlert}

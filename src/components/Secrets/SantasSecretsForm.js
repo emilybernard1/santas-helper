@@ -3,9 +3,9 @@ import { Form, Container, Button } from 'react-bootstrap'
 import santasSecrets from './ShowSantasSecrets'
 
 const SantasSecretForm = (props) => {
-    const { santasSecrets, wishList, handleChange, handleSubmit, heading } = props
+    const { santasSecret, wishList, handleChange, handleSubmit, heading } = props
 
-    console.log('this is santasSecret in the form\n', santasSecrets)
+    console.log('this is santasSecret in the form\n', santasSecret)
 
     return (
         <Container className="justify-content-center" style={{ fontFamily: "Oswald" }}>
@@ -16,7 +16,7 @@ const SantasSecretForm = (props) => {
                     placeholder="what's your recipient's name?"
                     name="name"
                     id="name"
-                    value={santasSecrets.name}
+                    value={santasSecret.name}
                     onChange={handleChange}
                 />
                 <Form.Label>Wish List for Santa:</Form.Label>
@@ -24,7 +24,7 @@ const SantasSecretForm = (props) => {
                     placeholder="what would you like Santa to bring this person..."
                     name="secret"
                     id="secret"
-                    value={santasSecrets.secret}
+                    value={santasSecret.secret}
                     onChange={handleChange}
                 />
                 <Button id="button" className="m-3 justify-content-end" type="submit"> Submit </Button>

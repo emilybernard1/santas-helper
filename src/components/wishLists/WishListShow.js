@@ -6,7 +6,7 @@ import EditWishListModal from './EditWishListModal'
 // import UploadPicture from './UploadPictureModal'
 import NewSantasSecretModal from "../secrets/NewSantasSecretModal"
 import SantasSecrets from "../secrets/ShowSantasSecrets"
-
+import { getSantasSecrets } from '../../api/santasSecrets'
 import MessageOffCanvas from '../shared/MessageOffCanvas'
 
 const WishListShow = (props) => {
@@ -40,7 +40,21 @@ const WishListShow = (props) => {
             })
     }, [updated])
 
-
+    // const getSecrets = (id) => {
+    //     getSantasSecrets(user, id)
+    //         .then((res) => {
+    //             console.log(res.data.santasSecrets)
+    //             setSantasSecrets(res.data.santasSecrets)
+    //         })
+    //         .catch((error) => {
+    //             msgAlert({
+    //                 heading: 'Failure',
+    //                 message: 'Show Wish List Failure' + error,
+    //                 variant: 'danger'
+    //             })
+    //         })
+    // }
+    
     const candyCanePic = require('../shared/images/candy-cane.jpeg')
     const christmasTreePic = require('../shared/images/christmas-tree.jpeg')
     const giftPic = require('../shared/images/gift.jpeg')
@@ -146,7 +160,7 @@ const WishListShow = (props) => {
                     <Col xl={6}>
                         <Container fluid style={{ width: "100%" }}>
                             <Card className='mt-3'>
-                                <Card.Header><h1 style={{ color: 'red' }}>{wishList.name}'s Wish</h1> 
+                                <Card.Header><h1 style={{ color: 'red' }}>{wishList.name}'s Wish List</h1> 
                                 </Card.Header>
                                 <Card.Body>
                                     {/* <h2>Please choose an image {wishList.typeOfWishList}</h2> */}
@@ -181,6 +195,7 @@ const WishListShow = (props) => {
                         <NewSantasSecretModal
                             user={user}
                             wishList={wishList}
+                            santasSecrets={santasSecrets}
                             show={santasSecretModalShow}
                             msgAlert={msgAlert}
                             triggerRefresh={() => setUpdated(prev => !prev)}
@@ -194,6 +209,7 @@ const WishListShow = (props) => {
                             wishList={wishList}
                             show={editModalShow}
                             msgAlert={msgAlert}
+                            santasSecrets={santasSecrets}
                             triggerRefresh={() => setUpdated(prev => !prev)}
                             handleClose={() => setEditModalShow(false)}
                         />

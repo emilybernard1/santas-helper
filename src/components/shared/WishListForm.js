@@ -34,13 +34,13 @@ const WishListForm = (props) => {
                 <GiftCheckBox
                     label="Has this item been bought?"
                     value={wishList.isBought}
-                    onChange={handleCheck}
+                    onChange={handleChange}
                 />
                 <br></br>
                 <WrappedCheckBox
                     label="Has this item been wrapped?"
                     value={wishList.isWrapped}
-                    onChange={handleCheckWrapped}
+                    onChange={handleChange}
                 />
                 <br></br>
                 <br></br>

@@ -10,7 +10,7 @@ const WrappedCheckBox = ({ label, value, onChange, handleChange }) => {
                     checked={value}
                     label="Has this item been wrapped?"
                     name="isWrapped"
-                    onChange={handleChange}
+                    onChange={onChange}
                 />
             </div>
             {label}
@@ -18,4 +18,4 @@ const WrappedCheckBox = ({ label, value, onChange, handleChange }) => {
     )
 }
 
-export default WrappedCheckBox
+export default WrappedCheckBox  

@@ -5,16 +5,16 @@ import EditSantasSecretsModal from './EditSantasSecretModal'
 
 
 const SantasSecrets = (props) => {
-    const { santasSecrets, wishList, user, msgAlert, triggerRefresh } = props
+    const { santasSecret, wishList, user, msgAlert, triggerRefresh } = props
     console.log('this is the props', props)
     console.log('this is the wishList in showWishList\n', wishList)
-    console.log('this is the santasSecrets \n', santasSecrets)
+    console.log('this is the santasSecrets \n', santasSecret)
 
     const [editSantasSecretsModalShow, setEditSantasSecretsModalShow] = useState(false)
     const userString = JSON.stringify(props.user.email)
 
     const destroySantasSecrets = () => {
-        deleteSantasSecrets(user, wishList._id, santasSecrets._id)
+        deleteSantasSecrets(user, wishList._id, santasSecret._id)
             .then(() => {
                 msgAlert({
                     heading: 'Secret deleted!',
@@ -36,9 +36,9 @@ const SantasSecrets = (props) => {
     return (
         <>
             <Card className="m-1" border="primary">
-                <Card.Header> <h3> Dear Santa, please bring {santasSecrets.name} the following gifts: </h3> </Card.Header>
+                <Card.Header> <h3> Dear Santa, please bring {santasSecret.name} the following gifts: </h3> </Card.Header>
                 <Card.Body>
-                    <h4> { santasSecrets.secret } </h4>
+                    <h4> { santasSecret.secret } </h4>
                 </Card.Body>
                 <Card.Footer>
                     { 
@@ -71,7 +71,7 @@ const SantasSecrets = (props) => {
             <EditSantasSecretsModal
                 user={user}
                 wishList={wishList}
-                santasSecret={santasSecrets}
+                santasSecret={santasSecret}
                 msgAlert={msgAlert}
                 triggerRefresh={triggerRefresh}
                 show={editSantasSecretsModalShow}
