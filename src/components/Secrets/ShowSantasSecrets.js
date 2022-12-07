@@ -8,7 +8,7 @@ const SantasSecrets = (props) => {
     const { santasSecret, wishList, user, msgAlert, triggerRefresh } = props
     const [editSantasSecretsModalShow, setEditSantasSecretsModalShow] = useState(false)
     const userString = JSON.stringify(props.user.email)
-
+    // unused function declaration 
     const destroySantasSecrets = () => {
         deleteSantasSecrets(user, wishList._id, santasSecret._id)
             .then(() => {

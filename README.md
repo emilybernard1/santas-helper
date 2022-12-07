@@ -4,7 +4,7 @@ This is a full stack application where users can create wish lists of Christmas 
 
 ## Deployed Link
 TBD
-
+<!-- add a link and description to the api that your api is designed to consume / work with, and the repo  -->
 ## Technology Used
   - HTML
   - CSS

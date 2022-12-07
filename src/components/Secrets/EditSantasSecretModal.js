@@ -9,10 +9,10 @@ const EditSantasSecretsModal = (props) => {
     const {
         user, show, handleClose,
         msgAlert, triggerRefresh, wishList
-    } = props
+    } = props// we should dry this up with the spread operator since we are destructuring EVERYTHING
 
-    const { wishListId, santasSecretsId } = useParams()
-    const [santasSecret, setSantasSecret] = useState(props.santasSecret)
+    const { wishListId, santasSecretsId } = useParams()// unused variables
+    const [santasSecret, setSantasSecret] = useState(props.santasSecret) // should dry this up by only have 1 destructuring line ( add this to 9-12)
 
     const handleChange = (e) => {
         setSantasSecret(prevSantasSecret => {
