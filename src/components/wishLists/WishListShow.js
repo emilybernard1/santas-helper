@@ -4,9 +4,9 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { wishListDelete, wishListShow } from '../../api/wishList'
 import EditWishListModal from './EditWishListModal'
 // import UploadPicture from './UploadPictureModal'
-import NewSantasSecretModal from "../secrets/NewSantasSecretModal"
-import SantasSecrets from "../secrets/ShowSantasSecrets"
-import { getSantasSecrets } from '../../api/santasSecrets'
+import NewSantasSecretModal from '../secrets/NewSantasSecretModal'
+// import SantasSecrets from "../secrets/ShowSantasSecrets"
+// import { getSantasSecrets } from '../../api/santasSecrets'
 import MessageOffCanvas from '../shared/MessageOffCanvas'
 
 const WishListShow = (props) => {
@@ -19,7 +19,7 @@ const WishListShow = (props) => {
     const [updated, setUpdated] = useState(false)
     const [deleted, setDeleted] = useState(false)
     const [santasSecretModalShow, setSantasSecretModalShow] = useState(false)
-    const [santasSecrets, setSantasSecrets] = useState(false)
+    // const [santasSecrets, setSantasSecrets] = useState(false)
 
     const { id } = useParams()
     const navigate = useNavigate()
