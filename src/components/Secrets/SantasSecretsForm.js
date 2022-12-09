@@ -1,9 +1,10 @@
 import React from 'react'
 import { Form, Container, Button } from 'react-bootstrap'
-import santasSecrets from './ShowSantasSecrets'
+// import santasSecrets from './ShowSantasSecrets'
 
 const SantasSecretForm = (props) => {
-    const { santasSecret, wishList, handleChange, handleSubmit, heading } = props
+    const { santasSecret, handleChange, handleSubmit, heading } = props
+
 
     return (
         <Container className="justify-content-center" style={{ fontFamily: "Oswald" }}>

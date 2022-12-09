@@ -1,12 +1,11 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container, Row, Col, Card, Button, ButtonGroup, Image } from 'react-bootstrap'
 import { useParams, useNavigate } from 'react-router-dom'
 import { wishListDelete, wishListShow } from '../../api/wishList'
 import EditWishListModal from './EditWishListModal'
 // import UploadPicture from './UploadPictureModal'
 import NewSantasSecretModal from '../secrets/NewSantasSecretModal'
-// import SantasSecrets from "../secrets/ShowSantasSecrets"
-// import { getSantasSecrets } from '../../api/santasSecrets'
+import SantasSecrets from '../secrets/SantasSecretsForm'
 import MessageOffCanvas from '../shared/MessageOffCanvas'
 
 const WishListShow = (props) => {
@@ -37,21 +36,6 @@ const WishListShow = (props) => {
                 })
             })
     }, [updated])
-
-    // const getSecrets = (id) => {
-    //     getSantasSecrets(user, id)
-    //         .then((res) => {
-    //             console.log(res.data.santasSecrets)
-    //             setSantasSecrets(res.data.santasSecrets)
-    //         })
-    //         .catch((error) => {
-    //             msgAlert({
-    //                 heading: 'Failure',
-    //                 message: 'Show Wish List Failure' + error,
-    //                 variant: 'danger'
-    //             })
-    //         })
-    // }
     
     const candyCanePic = require('../shared/images/candy-cane.jpeg')
     const christmasTreePic = require('../shared/images/christmas-tree.jpeg')
@@ -193,7 +177,7 @@ const WishListShow = (props) => {
                         <NewSantasSecretModal
                             user={user}
                             wishList={wishList}
-                            santasSecrets={santasSecrets}
+                            santasSecrets={SantasSecrets}
                             show={santasSecretModalShow}
                             msgAlert={msgAlert}
                             triggerRefresh={() => setUpdated(prev => !prev)}
@@ -207,7 +191,7 @@ const WishListShow = (props) => {
                             wishList={wishList}
                             show={editModalShow}
                             msgAlert={msgAlert}
-                            santasSecrets={santasSecrets}
+                            santasSecrets={SantasSecrets}
                             triggerRefresh={() => setUpdated(prev => !prev)}
                             handleClose={() => setEditModalShow(false)}
                         />
