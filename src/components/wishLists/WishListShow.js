@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { wishListDelete, wishListShow } from '../../api/wishList'
 import EditWishListModal from './EditWishListModal'
 // import UploadPicture from './UploadPictureModal'
-import NewSantasSecretModal from '../../secrets/NewSantasSecretModal'
+import NewSantasSecretModal from '../secrets/NewSantasSecretModal'
 import SantasSecrets from '../secrets/SantasSecretsForm'
 import MessageOffCanvas from '../shared/MessageOffCanvas'
 
