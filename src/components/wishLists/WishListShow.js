@@ -24,7 +24,7 @@ const WishListShow = (props) => {
     const { id } = useParams()
     const navigate = useNavigate()
 
-    useEffect((id, msgAlert, user) => {
+    useEffect(() => {
         wishListShow(user, id)
             .then((res) => {
                 setWishList(res.data.wishList)
