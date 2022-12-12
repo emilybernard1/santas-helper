@@ -37,23 +37,23 @@ const WishListShow = (props) => {
             })
     }, [updated])
     
-    const candyCanePic = require('../shared/images/candy-cane.jpeg')
-    const christmasTreePic = require('../shared/images/christmas-tree.jpeg')
-    const giftPic = require('../shared/images/gift.jpeg')
+    // const candyCanePic = require('../shared/images/candy-cane.jpeg')
+    // const christmasTreePic = require('../shared/images/christmas-tree.jpeg')
+    // const giftPic = require('../shared/images/gift.jpeg')
 
-    const setImage = (type) => {
-        if (!wishList.img) {
-            if (type === "CandyCane") {
-                return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={candyCanePic} />
-            } else if (type === "ChristmasTree") {
-                return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={christmasTreePic} />
-            } else {
-                return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={giftPic} />
-            }
-        } else {
-            return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={wishList.img} />
-        }
-    }
+    // const setImage = (type) => {
+    //     if (!wishList.img) {
+    //         if (type === "CandyCane") {
+    //             return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={candyCanePic} />
+    //         } else if (type === "ChristmasTree") {
+    //             return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={christmasTreePic} />
+    //         } else {
+    //             return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={giftPic} />
+    //         }
+    //     } else {
+    //         return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={wishList.img} />
+    //     }
+    // }
 
     const handleDeleteWishList = () => {
         wishListDelete(user, id)
