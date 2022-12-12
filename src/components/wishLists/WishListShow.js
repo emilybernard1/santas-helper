@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Row, Col, Card, Button, ButtonGroup, Image } from 'react-bootstrap'
+import { Container, Row, Col, Card, Button, ButtonGroup } from 'react-bootstrap'
 import { useParams, useNavigate } from 'react-router-dom'
 import { wishListDelete, wishListShow } from '../../api/wishList'
 import EditWishListModal from './EditWishListModal'
@@ -23,7 +23,7 @@ const WishListShow = (props) => {
     const { id } = useParams()
     const navigate = useNavigate()
 
-    useEffect(() => {
+    useEffect((id, msgAlert, user) => {
         wishListShow(user, id)
             .then((res) => {
                 setWishList(res.data.wishList)
@@ -109,7 +109,7 @@ const WishListShow = (props) => {
                     </Col>
                     <Col className='mx-auto mt-5'>
                         <Container className='justify-content-center'>
-                            {wishList ? setImage(wishList.type) : null}
+                            {/* {wishList ? setImage(wishList.type) : null} */}
                         </Container>
                         <Card.Body>
                             {wishList && wishList.owner && user && wishList.owner._id === user._id

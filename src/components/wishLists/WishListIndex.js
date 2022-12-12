@@ -21,7 +21,7 @@ const WishListIndex = ({ user, msgAlert }) => {
 
     const [allWishLists, setAllWishLists] = useState([])
 
-    useEffect(() => {
+    useEffect((msgAlert, user) => {
         wishListIndex(user)
             .then(res => {
                 setAllWishLists(res.data.wishLists)

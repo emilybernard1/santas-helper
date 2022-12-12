@@ -3,7 +3,7 @@ import { Modal } from 'react-bootstrap'
 import WishListForm from '../shared/WishListForm'
 import { wishListUpdate, wishListShow } from '../../api/wishList'
 
-import { useParams } from 'react-router-dom'
+// import { useParams } from 'react-router-dom'
 
 
 const EditWishListModal = (props) => {
@@ -14,9 +14,9 @@ const EditWishListModal = (props) => {
 
     const [wishList, setWishList] = useState(props.wishList)
 
-    const { id } = useParams()
+    // const { id } = useParams()
 
-    useEffect(() => {
+    useEffect((id, msgAlert, user) => {
         wishListShow(user, id)
             .then((res) => {
                 setWishList(res.data.wishList)

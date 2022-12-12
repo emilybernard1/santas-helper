@@ -7,7 +7,7 @@ import EditSantasSecretsModal from './EditSantasSecretModal'
 const SantasSecrets = (props) => {
     const { santasSecret, wishList, user, msgAlert, triggerRefresh } = props
     const [editSantasSecretsModalShow, setEditSantasSecretsModalShow] = useState(false)
-    const userString = JSON.stringify(props.user.email)
+    // const userString = JSON.stringify(props.user.email)
 
     const destroySantasSecrets = () => {
         deleteSantasSecrets(user, wishList._id, santasSecret._id)

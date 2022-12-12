@@ -3,7 +3,7 @@ import { Modal } from 'react-bootstrap'
 import SantasSecretsForm from './SantasSecretsForm'
 import { updateSantasSecrets } from '../../api/santasSecrets'
 import messages from '../shared/AutoDismissAlert/AutoDismissAlert'
-import { useParams } from 'react-router-dom'
+// import { useParams } from 'react-router-dom'
 
 const EditSantasSecretsModal = (props) => {
     const {
@@ -11,7 +11,7 @@ const EditSantasSecretsModal = (props) => {
         msgAlert, triggerRefresh, wishList
     } = props
 
-    const { wishListId, santasSecretsId } = useParams()
+    // const { wishListId, santasSecretsId } = useParams()
     const [santasSecret, setSantasSecret] = useState(props.santasSecret)
 
     const handleChange = (e) => {
