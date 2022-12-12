@@ -35,7 +35,8 @@ const WishListShow = (props) => {
                     message: 'Show Wish List Failure' + error,
                     variant: 'danger'
                 })
-            })
+            }) 
+            // eslint-disable-next-line
     }, [updated])
     
     const candyCanePic = require('../shared/images/candy-cane.jpeg')
