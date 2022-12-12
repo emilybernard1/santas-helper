@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Row, Col, Card, Button, ButtonGroup } from 'react-bootstrap'
+import { Container, Row, Col, Card, Button, ButtonGroup, Image } from 'react-bootstrap'
 import { useParams, useNavigate } from 'react-router-dom'
 import { wishListDelete, wishListShow } from '../../api/wishList'
 import EditWishListModal from './EditWishListModal'
@@ -7,6 +7,7 @@ import EditWishListModal from './EditWishListModal'
 import NewSantasSecretModal from '../secrets/NewSantasSecretModal'
 import SantasSecrets from '../secrets/SantasSecretsForm'
 import MessageOffCanvas from '../shared/MessageOffCanvas'
+
 
 const WishListShow = (props) => {
 
@@ -37,23 +38,23 @@ const WishListShow = (props) => {
             })
     }, [updated])
     
-    // const candyCanePic = require('../shared/images/candy-cane.jpeg')
-    // const christmasTreePic = require('../shared/images/christmas-tree.jpeg')
-    // const giftPic = require('../shared/images/gift.jpeg')
+    const candyCanePic = require('../shared/images/candy-cane.jpeg')
+    const christmasTreePic = require('../shared/images/christmas-tree.jpeg')
+    const giftPic = require('../shared/images/gift.jpeg')
 
-    // const setImage = (type) => {
-    //     if (!wishList.img) {
-    //         if (type === "CandyCane") {
-    //             return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={candyCanePic} />
-    //         } else if (type === "ChristmasTree") {
-    //             return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={christmasTreePic} />
-    //         } else {
-    //             return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={giftPic} />
-    //         }
-    //     } else {
-    //         return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={wishList.img} />
-    //     }
-    // }
+    const setImage = (type) => {
+        if (!wishList.img) {
+            if (type === "CandyCane") {
+                return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={candyCanePic} />
+            } else if (type === "ChristmasTree") {
+                return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={christmasTreePic} />
+            } else {
+                return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={giftPic} />
+            }
+        } else {
+            return <Image fluid style={{ width: '100%', height: '100%', border: 'solid red' }} src={wishList.img} />
+        }
+    }
 
     const handleDeleteWishList = () => {
         wishListDelete(user, id)
@@ -109,7 +110,7 @@ const WishListShow = (props) => {
                     </Col>
                     <Col className='mx-auto mt-5'>
                         <Container className='justify-content-center'>
-                            {/* {wishList ? setImage(wishList.type) : null} */}
+                            {wishList ? setImage(wishList.typeOfWishList) : null}
                         </Container>
                         <Card.Body>
                             {wishList && wishList.owner && user && wishList.owner._id === user._id
