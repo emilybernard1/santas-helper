@@ -2,7 +2,7 @@ let apiUrl
 const apiUrls = {
 	// YOU MUST CHANGE PRODUCTION URL WHEN DEPLOYING
 	production: 'https://santashelperbackend.fly.dev',
-	development: 'http://localhost:8080',
+	development: 'http://localhost:3001',
 }
 
 if (window.location.hostname === 'localhost') {
